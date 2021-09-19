@@ -1,7 +1,7 @@
-import Welcome from './Pages/Welcome';
-import TS from './Pages/TS';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './Components/Navbar';
+import Welcome from "./Pages/Welcome";
+import TS from "./Pages/TS";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
@@ -9,14 +9,14 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <Welcome/>
+            <Welcome />
           </Route>
           <Route exact path="/home">
-            <Navbar/>
-            <TS/>
+            <Navbar />
+            <TS />
           </Route>
-          <Route exact pat='/navbar>'>
-            <Navbar/>
+          <Route exact path="/navbar>">
+            <Navbar />
           </Route>
         </Switch>
       </div>
