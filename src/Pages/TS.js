@@ -2,14 +2,14 @@ import '../CSS/TS.css';
 import Navbar from '../Components/Navbar';
 
 const TS = () => {
-    return ( 
-        
+    return (
+
         <div className="ts">
             <div className="box">
             </div>
             <button style={{
                 fontSize:'48px',
-                top:'700px',
+                top:'500px',
                 left:'320px'
             }}>
                 <b>Traveler</b>
@@ -17,14 +17,14 @@ const TS = () => {
 
             <button style={{
                 fontSize:'48px',
-                top:'700px',
+                top:'500px',
                 left:'1200px',
-                
+
             }}>
                 <b>Shop Owner</b>
             </button>
         </div>
      );
 }
- 
+
 export default TS;
