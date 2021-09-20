@@ -3,10 +3,11 @@
 /* base styles */
 * {
   margin: 0;
-  font-family: "Quicksand";
-  color: #333;
 }
 .navbar {
+  margin:0;
+  font-family: "Quicksand";
+  color: #333;
   background: linear-gradient(90deg, #5ba7bf 0%, #5ba7bf 100%);
   height: 90px;
   font-size: 1.2rem;

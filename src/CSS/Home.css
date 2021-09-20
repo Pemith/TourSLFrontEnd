@@ -15,32 +15,36 @@
 }
 
 .box{
-    width: 467px;
-    height: 376px;
+    width: 25%;
+    height: 40%;
     background: rgba(229, 229, 229, 0.55);
     border-radius: 20px;
-    margin:0;
+    margin-top: auto;
+    margin-left:auto;
+    margin-right: auto;
     position: absolute;
     left: 36.5%;
     top: 5%;
-    display:flex; 
+    display:block; 
 }
 
 .box-img{
-    top: 60px;
-    left: 160px;   
+    margin: auto;
+    align-self: center;
+    /* margin-top: auto;
+    margin-left: auto;    */
     position:absolute;
     /* margin-left: 2%; */
     z-index: 0; 
 }
 
 .home p{
+    margin: auto;
     text-align: center;
     text-decoration: none;
-    text-decoration: solid;
     font-size: 50px;
-    line-height: 12;
     font-weight: bold;
+    display: block;
 }
  
 .button{
