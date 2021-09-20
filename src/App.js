@@ -2,6 +2,7 @@ import Welcome from "./Pages/Welcome";
 import TS from "./Pages/TS";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
 
 function App() {
   return (
@@ -11,8 +12,11 @@ function App() {
           <Route exact path="/">
             <Welcome />
           </Route>
-          <Route exact path="/home">
+          <Route exact path="/ts">
             <TS />
+          </Route>
+          <Route exact path="/home">
+            <Home />
           </Route>
           <Route exact path="/navbar>">
             <Navbar/>
