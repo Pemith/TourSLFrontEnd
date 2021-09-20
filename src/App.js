@@ -12,11 +12,10 @@ function App() {
             <Welcome />
           </Route>
           <Route exact path="/home">
-            <Navbar />
             <TS />
           </Route>
           <Route exact path="/navbar>">
-            <Navbar />
+            <Navbar/>
           </Route>
         </Switch>
       </div>
