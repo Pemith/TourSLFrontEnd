@@ -14,24 +14,8 @@ const Home = () => {
                 </p>
             </div>
 
-            {/* <div className="button">
-                <button style={{left:'20px'}}>Hi</button>
-            </div> */}
-            
-            <div className="button">
-            <ul>
-                <li>
-                    <button>
-                        Traveler
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        Shop Owner
-                    </button>
-                </li>
-            </ul>
-            </div>
+            <button className="button">Traveler</button>
+            <button className='button'>Shop Owner</button>
         </div>
         
      );
