@@ -1,0 +1,14 @@
+.reception{
+    background: f6f5f5 no-repeat fixed center;
+    background-size: cover;
+}
+
+.reception-img {
+    display: block;
+    margin-left: auto;
+    margin-right: 7%;
+    margin-top:2%;
+    float:right;
+    max-width:30%;
+    height: 40%;
+}

@@ -3,12 +3,19 @@
   width: 100%;
   clear: both;
   height: 200px;
+<<<<<<< HEAD
   margin-top: 50%;
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
   font-family: "Quicksand";
   color: black;
   position: relative;
   margin-bottom:0%;
+=======
+  background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
+  font-family: "Quicksand";
+  color: black;
+  margin-top: 80%;
+>>>>>>> 20e7088a00ce5bf9527c03fa27031005e2551698
 }
 
 .footer-img {

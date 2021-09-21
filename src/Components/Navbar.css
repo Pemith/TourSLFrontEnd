@@ -3,6 +3,7 @@
 /* base styles */
 * {
   margin: 0;
+  margin-bottom: 0%;
 }
 .navbar {
   margin:0;
