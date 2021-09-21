@@ -1,24 +1,26 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import slImg from '../Images/sriLankaHigh.png';
+
+import '../CSS/Reception.css';
 
 const Reception = () => {
-    return ( 
-        <>
-            <Navbar/>
-            
-                <h1>Hi</h1>
-                <p>
-                    Hello Sri Lanka. <br/>Everything here is true <br/>and confident.<br/> NASFNLKANVLAFN GNIOA FOJVALNCLASVNFAVNA LFLAF <br/>AFAKFNSCNSIOGW OSNL<br/> 
-                    Hello Sri Lanka. <br/>Everything here is true <br/>and confident.<br/> NASFNLKANVLAFN GNIOA FOJVALNCLASVNFAVNA LFLAF <br/>AFAKFNSCNSIOGW OSNL<br/> 
-                    Hello Sri Lanka. <br/>Everything here is true <br/>and confident.<br/> NASFNLKANVLAFN GNIOA FOJVALNCLASVNFAVNA LFLAF <br/>AFAKFNSCNSIOGW OSNL<br/> 
-                    Hello Sri Lanka. <br/>Everything here is true <br/>and confident.<br/> NASFNLKANVLAFN GNIOA FOJVALNCLASVNFAVNA LFLAF <br/>AFAKFNSCNSIOGW OSNL<br/> 
-                    Hello Sri Lanka. <br/>Everything here is true <br/>and confident.<br/> NASFNLKANVLAFN GNIOA FOJVALNCLASVNFAVNA LFLAF <br/>AFAKFNSCNSIOGW OSNL<br/> 
-                    Hello Sri Lanka. <br/>Everything here is true <br/>and confident.<br/> NASFNLKANVLAFN GNIOA FOJVALNCLASVNFAVNA LFLAF <br/>AFAKFNSCNSIOGW OSNL<br/> 
-                    Hello Sri Lanka. <br/>Everything here is true <br/>and confident.<br/> NASFNLKANVLAFN GNIOA FOJVALNCLASVNFAVNA LFLAF <br/>AFAKFNSCNSIOGW OSNL<br/> 
-                    Hello Sri Lanka. <br/>Everything here is true <br/>and confident.<br/> NASFNLKANVLAFN GNIOA FOJVALNCLASVNFAVNA LFLAF <br/>AFAKFNSCNSIOGW OSNL<br/> 
-                </p>
+    return (
+        
+        
+        <div className='reception'>
+            <Navbar/>             
+                <div className="reception-img">
+                    <img src={slImg}/>
+                </div>         
+                <h1>hi</h1>
+                <h1>hi</h1>
+                <h1>hi</h1>
             <Footer/>
-        </>
+        </div>
+        
+        
+        
      );
 }
  

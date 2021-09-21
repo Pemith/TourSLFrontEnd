@@ -1,11 +1,11 @@
 .footer{
     padding: 5px 0px;
-    background:#edece7;
+    width: 100%;
+    background:linear-gradient(90deg, #EDECE7 0%, #EDECE7 100%);
     font-family: "Quicksand";
     color:black;
-    bottom: 0;
-    width: 100%;
-
+    position: sticky;
+    bottom: 0%;    
 }
 
 .footer-img {
