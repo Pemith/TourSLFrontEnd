@@ -1,10 +1,9 @@
 import Welcome from "./Pages/Welcome";
 import TS from "./Pages/TS";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Footer from './Components/Footer';
 import Home from "./Pages/Home";
 import Reception from "./Pages/Reception";
+import ARS from './Pages/ARS';
 
 function App() {
   return (
@@ -22,6 +21,9 @@ function App() {
           </Route>
           <Route exact path="/reception">
             <Reception/>
+          </Route>
+          <Route exact path="/ars">
+            <ARS/>
           </Route>
         </Switch>
       </div>

@@ -4,10 +4,10 @@
   clear: both;
   position: relative;
   height: 200px;
-  margin-top: 80%;
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
   font-family: "Quicksand";
   color: black;
+  margin-top: 80%;
 }
 
 .footer-img {
