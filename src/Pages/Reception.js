@@ -16,6 +16,7 @@ const Reception = () => {
                 <h1>hi</h1>
                 <h1>hi</h1>
                 <h1>hi</h1>
+                <h1>Hi</h1>
             <Footer/>
         </div>
         
