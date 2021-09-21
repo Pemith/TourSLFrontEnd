@@ -1,28 +1,32 @@
 import '../CSS/TS.css';
-import Navbar from '../Components/Navbar';
+import LogoImg from "../Images/Yaka.png";
 
 const TS = () => {
     return (
 
         <div className="ts">
             <div className="box">
+                <div className="box-img">
+                    <img src={LogoImg} alt="Invalid"/>
+                </div>              
+                    <p>
+                        Tour SL                    
+                    </p>                       
             </div>
-            <button style={{
-                fontSize:'48px',
-                top:'500px',
-                left:'320px'
-            }}>
-                <b>Traveler</b>
-            </button>
 
-            <button style={{
-                fontSize:'48px',
-                top:'500px',
-                left:'1200px',
-
-            }}>
-                <b>Shop Owner</b>
-            </button>
+            <ul className="button">
+                <li>
+                    <button>
+                        <b>Traveler</b>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <b>Shop Owner</b>
+                    </button>
+                </li>
+            </ul>
+            
         </div>
      );
 }

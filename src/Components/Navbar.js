@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="nav-img">
-          <img src={LogoImg} style={{ align: "left" }} />
+          <img src={LogoImg} alt="Invalid"/>
         </div>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
