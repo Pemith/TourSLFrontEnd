@@ -1,13 +1,14 @@
 .footer {
-  padding: 10px 0px;
+  padding: 35px 0px;
   width: 100%;
   clear: both;
-  position: relative;
   height: 200px;
-  margin-top: 80%;
+  margin-top: 50%;
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
   font-family: "Quicksand";
   color: black;
+  position: relative;
+  margin-bottom:0%;
 }
 
 .footer-img {

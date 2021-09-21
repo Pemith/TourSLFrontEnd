@@ -1,8 +1,6 @@
 import Welcome from "./Pages/Welcome";
 import TS from "./Pages/TS";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Footer from './Components/Footer';
 import Home from "./Pages/Home";
 import Reception from "./Pages/Reception";
 
