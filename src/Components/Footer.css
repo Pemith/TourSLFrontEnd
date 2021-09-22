@@ -1,25 +1,20 @@
 .footer {
-  padding: 35px 0px;
+  padding: 32px 0px;
   width: 100%;
   clear: both;
   height: 200px;
-<<<<<<< HEAD
-  margin-top: 50%;
+  /* margin-top: 50%; */
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
   font-family: "Quicksand";
   color: black;
   position: relative;
+  bottom: 0;
   margin-bottom:0%;
-=======
-  background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
-  font-family: "Quicksand";
-  color: black;
-  margin-top: 80%;
->>>>>>> 20e7088a00ce5bf9527c03fa27031005e2551698
+
 }
 
 .footer-img {
-  height: 120px;
+  height: 130px;
   float: left;
   position: relative;
   margin-left: 3%;
@@ -32,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .column {
