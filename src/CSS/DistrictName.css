@@ -1,0 +1,40 @@
+.DistrictName{
+    background: url('../Images/Sigiri.jpg') center center/cover no-repeat;
+    /* position: relative; */
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+
+}
+.block {
+    display: block;
+    position:relative;
+    border: none;
+    text-align:justify;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top:50px;
+
+    width: 370px;
+    height: 162px;
+    left: 40%;
+    top: 20%;
+    bottom: 20%;
+
+    background: #DCDAD4;
+    border-radius: 50px;
+/* font */
+    font-family: Ribeye;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 68px;
+    text-align: center;
+  }
+  .block:hover {
+    background-color: rgb(60, 184, 221);
+    color: black;
+  }
+  

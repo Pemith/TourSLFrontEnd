@@ -1,17 +1,20 @@
 .footer {
-  padding: 10px 0px;
+  
+  padding: 32px 0px;
   width: 100%;
   clear: both;
-  position: relative;
   height: 200px;
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
   font-family: "Quicksand";
   color: black;
-  margin-top: 80%;
+  margin-top: 5%;
+  position: relative;
+  bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .footer-img {
-  height: 120px;
+  height: 130px;
   float: left;
   position: relative;
   margin-left: 3%;
@@ -24,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .column {
