@@ -10,10 +10,11 @@
   position: relative;
   bottom: 0;
   margin-bottom:0%;
+
 }
 
 .footer-img {
-  height: 120px;
+  height: 130px;
   float: left;
   position: relative;
   margin-left: 3%;
@@ -26,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .column {
