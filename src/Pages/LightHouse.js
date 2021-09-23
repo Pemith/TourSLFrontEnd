@@ -17,7 +17,7 @@ const Lighthouse =() => {
                     <a href="#">Galle</a>
                     <a href="#">Hambanthota</a>
                 </div>
-                </div>
+            </div>
                 <div className="desc">
                     <h2>Description</h2>
                 </div>
