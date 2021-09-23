@@ -13,8 +13,8 @@
     border: none;
     width: 325px;
     height: 76px;
-    left: 28%;
-    top: 548px;
+    margin-left: 28%;
+    margin-top: 20%;
     
 
     background: #FFFCFC;
@@ -59,7 +59,7 @@
     text-align: center;
 
     color: #000000;
-    transition: 0.3s;
+    transition: 0.2s;
   }
   
 .dropdown-content a {

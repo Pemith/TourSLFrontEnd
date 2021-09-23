@@ -14,6 +14,7 @@ const Reception = () => {
                     <img src={slImg}/>
                 </div>     
                 <div className='reception-p'>
+                    
                     <p>
                     Sri Lanka is an island country located off the southern coast of India. Sri Lanka is surrounded by the Indian Ocean, Gulf of Mannar, the Palk Strait, and lies in the vicinity of India and the Maldives. The geography of Sri Lanka includes coastal plains in the north and hills and mountains in the interior.
                     </p>
