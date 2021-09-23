@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
             <h2> Tour SL</h2>
-            <i class="fab fa-typo3" />
+            {/* <i class="fab fa-typo3" /> */}
           </Link>
         </div>
       </nav>

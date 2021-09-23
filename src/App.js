@@ -8,6 +8,8 @@ import DistrictName from "./Pages/DistrictName";
 import Activities from "./Pages/Activities";
 import Leisure from "./Pages/Leisure";
 import Lighthouse from "./Pages/LightHouse";
+import Sregistration from "./Pages/Sregistration";
+import ActivityProvider from "./Pages/ActivityProviderRegistration";
 
 function App() {
   return (
@@ -40,6 +42,12 @@ function App() {
           </Route>
           <Route exact path="/lighthouse">
             <Lighthouse/>
+          </Route>
+          <Route exact path="/sreg">
+            <Sregistration/>
+          </Route>
+          <Route exact path="/apreg">
+            <ActivityProvider/>
           </Route>
         </Switch>
       </div>
