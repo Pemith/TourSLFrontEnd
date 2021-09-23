@@ -1,9 +1,7 @@
 import Welcome from "./Pages/Welcome";
-import TS from "./Pages/TS";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import Reception from "./Pages/Reception";
-import ARS from './Pages/ARS';
 import DistrictName from "./Pages/DistrictName";
 import Activities from "./Pages/Activities";
 import Leisure from "./Pages/Leisure";
@@ -19,17 +17,11 @@ function App() {
           <Route exact path="/">
             <Welcome />
           </Route>
-          <Route exact path="/ts">
-            <TS />
-          </Route>
           <Route exact path="/home">
             <Home />
           </Route>
           <Route exact path="/reception">
             <Reception/>
-          </Route>
-          <Route exact path="/ars">
-            <ARS/>
           </Route>
           <Route exact path="/districtname">
             <DistrictName/>

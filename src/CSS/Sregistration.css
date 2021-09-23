@@ -10,32 +10,22 @@
     position: relative;
 }
 
-.apreg-img{
-    background-image: url('../Images/RegSurf.jpg');
-    /* background-color: #cccccc; */
-    height: fit-content;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;  
-    position: relative;
-}
-.box{
-    font-family: "Quicksand";
-    background: rgba(229, 229, 229, 1);
-    width: 467px;
-    height: auto;
-    display:flex; 
-    border-radius: 20px;
-    padding:50px;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    position: static;
-    justify-content: center;
-  }
+    .boxreg{
+        font-family: "Quicksand";
+        background: rgba(229, 229, 229, 1);
+        width: 467px;
+        height: auto;
+        display:flex; 
+        border-radius: 20px;
+        padding:50px;
+        margin: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        position: static;
+        justify-content: center;
+    }
 
-  .boxap{
+  /* .boxap{
     font-family: "Quicksand";
     background: rgba(229, 229, 229, 1);
     width: 467px;
@@ -48,7 +38,7 @@
     margin-right: auto;
     position: static;
     justify-content: center;
-  }  
+  }   */
 
 
 /* .sreg-text {
@@ -85,12 +75,6 @@
 }
 
 .formstyle input, .formstyle textarea {
-    /* width: 100%;
-    padding: 6px 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    display: block; */
     align-items: center;
     width: 300px;
     padding: 10px 20px;

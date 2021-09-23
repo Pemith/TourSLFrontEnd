@@ -1,28 +1,28 @@
-import Navbar from '../Components/Navbar'
+import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-
-import '../CSS/Sregistration.css';
-
+import '../CSS/Apregistration.css';
 const ActivityProvider = () => {
     return ( 
-        <div className="apreg-img">
+        <div className="apreg">
             <Navbar/>
-            <div className="boxap">
-                <div className="formstyle">
+                <div className="apbox">
+                    <div className="formstyleap">
                     <h1>Activity Provider Registration</h1>
-                    <label>Types of Activities</label>
-                    <input 
-                        type="text"
-                        required
-                    />
-                    <label>Legal Documents</label>
-                    <input 
-                        type="text"
-                        required
-                    />
-                    <button>Submit</button>
+                        <form>                                                       
+                            <label>Types of Activities</label>
+                            <input 
+                                type="text"
+                                required
+                            />
+                            <label>Legal Documents</label>
+                            <input 
+                                type="text"
+                                required
+                            />
+                            <button>Submit</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
             <Footer/>
         </div>
      );
