@@ -1,64 +1,36 @@
-
-.sreg-img{
-    background-image: url('../Images/sean-oulashin.jpg');
+.rreg{
+    background: url('../Images/Dining.jpg');
+    object-fit: cover;
     /* background-color: #cccccc; */
-    height: fit-content;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;  
     position: relative;
+  }
+
+.rregbox{ 
+    background: rgba(229, 229, 229, 1);
+    width: 467px;
+    height: 320px;
+    display:flex; 
+    border-radius: 20px;
+    padding: 50px;;
+    margin-top:3.4%;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    justify-content: center;
 }
 
-.apreg{
-  background: url('../Images/RegSurf.jpg');
-  object-fit: cover;
-  /* background-color: #cccccc; */
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;  
-  position: relative;
-}
 
-
-
-.boxreg{
-  font-family: "Quicksand";
-  background: rgba(229, 229, 229, 1);
-  width: 467px;
-  height: auto;
-  display:flex; 
-  border-radius: 20px;
-  padding:50px;
-  margin: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  position: static;
-  justify-content: center;
-}
-
-.apbox{ 
-  background: rgba(229, 229, 229, 1);
-  width: 467px;
-  height: auto;
-  display:flex; 
-  border-radius: 20px;
-  padding:50px;
-  margin-top:3.4%;
-  margin-left: auto;
-  margin-right: auto;
-  position: static;
-  justify-content: center;
-}
-
-.formstyle{
+.formstyleres{
     max-width: 600px;
     margin: 0;
     text-align: left;
 }
-.formstyle label {
+.formstyleres label {
     text-align: left;
     display: block;
     font-size: 20px;
@@ -66,7 +38,7 @@
     text-decoration: none;
 }
 
-.formstyle h1 {
+.formstyleres h1 {
     font-size: 30px;
     margin: 0%;
     margin-bottom:10%;
@@ -77,7 +49,7 @@
 
 }
 
-.formstyle p {
+.formstyleres p {
   margin:0% 0%;
   margin-bottom: 10%;
   text-align: center;
@@ -89,7 +61,7 @@
 
 }
 
-.formstyle input, .formstyle textarea{
+.formstyleres input, .formstyleres textarea{
     align-items: center;
     width: 300px;
     padding: 10px 20px;
@@ -102,7 +74,7 @@
     font-size: 15px;
   }
 
-  .formstyle select{
+  .formstyleres select{
     /* align-items: center; */
     width: 100%;
     padding: 10px 20px;
@@ -115,7 +87,7 @@
     font-size: 15px;
   }
 
-.formstyle button {
+.formstyleres button {
     background: #f1356d;
     color: #fff;
     border: 0;
@@ -127,14 +99,11 @@
     display: inline-block;
     font-weight: bold;
     font-size: 20px;
-    margin-left: 20%;
+    margin-left: 15%;
   }  
 
-  .formstyle button:hover {
+  .formstyleres button:hover {
     background-color: rgb(60, 184, 221);
     color: black;
     transition: 0.3s;
   }
-
-
- 
