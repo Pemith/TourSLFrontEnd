@@ -7,6 +7,7 @@ import DistrictName from "./Pages/DistrictName";
 import Activities from "./Pages/Activities";
 import Leisure from "./Pages/Leisure";
 import Lighthouse from "./Pages/LightHouse";
+import ClientLogin from "./Pages/ClientLogin";
 import Sregistration from "./Pages/Sregistration";
 import ActivityProvider from "./Pages/ActivityProviderRegistration";
 import ABCLeisure from "./Pages/ABCLeisure";
@@ -44,6 +45,9 @@ function App() {
           </Route>
           <Route exact path="/lighthouse">
             <Lighthouse/>
+          </Route>
+          <Route exact path="/login">
+            <ClientLogin/>
           </Route>
           <Route exact path="/sreg">
             <Sregistration/>
