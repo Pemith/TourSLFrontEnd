@@ -12,6 +12,7 @@ import ABCLeisure from "./Pages/ABCLeisure";
 import TastyRes from "./Pages/TastyRes";
 import ABCPackagename from "./Pages/ABCPackagename";
 import MenuUpload from "./Pages/MenuUpload";
+import Profile from "./Pages/Profile";
 
 
 
@@ -58,6 +59,9 @@ function App() {
           </Route>
           <Route exact path='/menuupload'>
             <MenuUpload/>
+          </Route>
+          <Route exact path='/profile'>
+            <Profile/>
           </Route>
         </Switch>
       </div>
