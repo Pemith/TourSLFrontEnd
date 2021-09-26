@@ -6,7 +6,7 @@ const ClientLogin = () => {
     return ( 
         <div className="login-img">
             <Navbar/>
-                <div className="boxreg">
+                <div className="boxlog">
                     <div className="formstyle">
                     <h1>Login</h1>
                         <form>
