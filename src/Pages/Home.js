@@ -5,17 +5,19 @@ const Home = () => {
     return (
          
         <div className="home">
-            <div className="box">
-                <div className="box-img">
-                    <img src={logoImg} />
-                </div>
-                <p>
-                    Tour SL
-                </p>
+            <div className="boxhome">
+                <div className="boxhome-img">
+                    <img src={logoImg} alt="Invalid"/>
+                </div> 
+
+                <h1>Tour SL</h1> 
             </div>
 
-            <button className="button">Traveler</button>
-            <button className='button'>Shop Owner</button>
+            <div className="center">
+                <button>Traveler</button>
+                <button>Shop Owner</button>
+            </div>
+            
         </div>
         
      );
