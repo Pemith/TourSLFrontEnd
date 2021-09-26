@@ -28,30 +28,43 @@ img{
   object-fit: contain;
 }
 
-.box{
-  width: 467px;
+.boxw{
+  width: 420px;
   height: 376px;
   position: relative;
   display:flex; 
   background: rgba(229, 229, 229, 0.55);
   border-radius: 20px;
-  margin-right: 60%;
-  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: center;
 }
 
 .box-img{
   top: 70px;
   left: 163px;   
+=======
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: center;
+
+}
+
+.boxw-img{ 
+  height: 40%;
+  top: 10%;   
   position:absolute;
   margin-left: 2%; 
   z-index: 0;
 }
 
-.box p{
+.boxw h1{
   text-align: center;
-  text-decoration: none;
-  text-decoration: solid;
-  font-size: 50px;
-  line-height: 12;
-  margin-left: 32%;
+  font-size: 80px;
+  margin-top:55%;
 }
+
