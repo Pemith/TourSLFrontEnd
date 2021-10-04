@@ -1,10 +1,9 @@
 .footer {
   padding: 10px 5px;
-  width: 100%;
+  /* width: 100%; */
   clear: both;
-  height: 1%;
+  height: 15%;
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
-  font-family: "Quicksand";
   color: black;
   position:relative;
   margin-top: 11.6%;
