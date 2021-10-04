@@ -1,5 +1,6 @@
 import '../CSS/RegisterLogin.css'
 import logoImg from '../Images/Yaka.png';
+import {Link} from 'react-router-dom';
 
 const RegisterLogin = () => {
     return ( 
@@ -7,11 +8,19 @@ const RegisterLogin = () => {
         <div className="rlcontainer">
             <div className="boxreglog">                         
                     <div className="boxreglog-img">
-                        <img src={logoImg} />
+                        <Link to='/home'>
+                            <img src={logoImg} />
+                        </Link>                      
                     </div>
                 <div className="center">
-                    <button>Register</button><br/>
-                    <button>Log In</button>
+
+
+                    <Link to='/sreg'>
+                        <button>Register</button>
+                    </Link>
+                    <Link to='/login'>
+                        <button>Log In</button>
+                    </Link>                   
                 </div>                                       
             </div>
         </div>

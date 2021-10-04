@@ -1,5 +1,6 @@
 import Welcome from "./Pages/Welcome";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Home from "./Pages/Home";
 import RegisterLogin from "./Pages/RegisterLogin";
 import Reception from "./Pages/Reception";
@@ -16,11 +17,14 @@ import ABCPackagename from "./Pages/ABCPackagename";
 import MenuUpload from "./Pages/MenuUpload";
 import Profile from "./Pages/Profile";
 import RestaurantRegistration from "./Pages/RestaurantRegistration";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
+    
     <Router>
+      <ToastContainer/>
       <div className="App">
         <Switch>
           <Route exact path="/">
