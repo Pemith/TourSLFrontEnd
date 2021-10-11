@@ -13,7 +13,7 @@ const Sregistration = () => {
   const [district, setDistrict] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const history=useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const Sregistration = () => {
         address: address,
         district: district,
         email: email,
-        password: password,
+        password: password
         // method:'POST',
         // headers:{"Content-Type":"application/json"},
         // body:JSON.stringify(result)
@@ -44,6 +44,9 @@ const Sregistration = () => {
         (error) => {
           console.log(error);
         }
+      )
+      .then(      
+        history.push('/legal')
       )
       .catch((err) => {
         console.log(err);

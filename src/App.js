@@ -16,7 +16,7 @@ import TastyRes from "./Pages/TastyRes";
 import ABCPackagename from "./Pages/ABCPackagename";
 import MenuUpload from "./Pages/MenuUpload";
 import Profile from "./Pages/Profile";
-import RestaurantRegistration from "./Pages/RestaurantRegistration";
+import LegalDocuments from "./Pages/LegalDocuments";
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -60,8 +60,8 @@ function App() {
           <Route exact path="/apreg">
             <ActivityProvider/>
           </Route>
-          <Route exact path="/resreg">
-            <RestaurantRegistration/>
+          <Route exact path="/legal">
+            <LegalDocuments/>
           </Route>
           <Route exact path='/tastyres'>
             <TastyRes/>
