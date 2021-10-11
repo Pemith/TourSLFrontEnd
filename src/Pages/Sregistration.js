@@ -1,30 +1,65 @@
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer';
-import {useState} from "react";
+import {useState,useEffect} from "react";
+import axios from "axios";
+import { useHistory,Link } from "react-router-dom";
 import '../CSS/Sregistration.css';
 
 const Sregistration = () => {
 
-    const [companyName, setCompanyName]=useState('');
-    const [serviceType,setServiceType]=useState('');
-    const [address,setAddress]=useState('');
-    const [district,setDistrict]=useState('');
-    const [email,setEmail]=useState('');
-    const [password,setPassword]=useState('');
+    const [companyName, setCompanyName]=useState("");
+    const [serviceType,setServiceType]=useState("");
+    const [address,setAddress]=useState("");
+    const [district,setDistrict]=useState("");
+    const [email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
+    const history = useHistory();
 
     const handleSubmit =(e) =>{
         e.preventDefault();
-        const result={companyName,serviceType,address,password,district,email,password};
+        // const result={
+        //     companyName:companyName,
+        //     serviceType:serviceType,
+        //     address:address,
+        //     district:district,
+        //     email:email,
+        //     password:password
+        // };
 
-        fetch('http://localhost:3900/api/clienttemp/', {
-            method:'POST',
-            headers:{"Content-Type":"application/json"},
-            body:JSON.stringify(result)
-        }).then(()=>{
-            console.log('Successfully Updated');
+        // fetch('http://localhost:3900/api/clienttemp', {
+        //     method:'POST',
+        //     headers:{"Content-Type":"application/json"},
+        //     body:JSON.stringify(result)
+        // })
+        axios
+        .post("http://localhost:3900/api/clienttemp/", {
+            companyName: companyName,
+            serviceType: serviceType,
+            address: address,
+            district: district,
+            email: email,
+            password: password
         })
+        .then(
+            (response)=>{
+                console.log(response);
+            },
+            (error) =>{
+                console.log(error)
+            }
+            // history.push('/')
 
+        )
+        .catch((err) => {
+            console.log(err);
+        });
     }
+
+  
+
+//   const choose= (value) =>{
+//     history.push('/apreg')
+//   }
     return(
         <div className="sreg-img">
             <Navbar/>
@@ -76,7 +111,6 @@ const Sregistration = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-
                             <button>Next</button>
                         </form>
 
