@@ -26,8 +26,7 @@ const Sregistration = () => {
     //   password,
     // };
 
-    axios
-      .post("http://localhost:3900/api/clienttemp/", {
+    axios.post("http://localhost:3900/api/clienttemp/", {
         companyName: companyName,
         serviceType: serviceType,
         address: address,
