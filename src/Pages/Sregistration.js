@@ -1,22 +1,29 @@
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer';
-import {useState,useEffect} from "react";
+import {useState,Component} from "react";
 import axios from "axios";
+import Joi from "joi-browser";
 import { useHistory,Link } from "react-router-dom";
+import { toast } from 'react-toastify';
 import '../CSS/Sregistration.css';
 
 
 const Sregistration = () => {
   const [companyName, setCompanyName] = useState("");
-  const [serviceType, setServiceType] = useState("");
+  const [serviceType, setServiceType] = useState("Activity Provider");
   const [address, setAddress] = useState("");
   const [district, setDistrict] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history=useHistory();
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // const errors = this.validate();
+    // this.setState({ errors: errors || {} });
+    // if (errors) return;
     // const result = {
     //   companyName,
     //   serviceType,
@@ -25,8 +32,9 @@ const Sregistration = () => {
     //   email,
     //   password,
     // };
-
-    axios.post("http://localhost:3900/api/clienttemp/", {
+    try {
+      
+      axios.post("http://localhost:3900/api/client/", {
         companyName: companyName,
         serviceType: serviceType,
         address: address,
@@ -40,17 +48,26 @@ const Sregistration = () => {
       .then(
         (response) => {
           console.log(response);
+          history.push('/legal')
         },
         (error) => {
-          console.log(error);
+          console.log(error.response.data);
+          let errorMessage=error.response.data;
+          toast.error(errorMessage);
         }
       )
-      .then(      
-        history.push('/legal')
-      )
+      // .then(      
+      //   history.push('/legal')
+      // )
       .catch((err) => {
         console.log(err);
       });
+    } catch (ex) {
+      if(ex.response.status === 400){
+        return ex.response.status();
+      }
+    }
+    
   };
 
   return (
