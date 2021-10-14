@@ -42,11 +42,15 @@ const ClientLogin = () => {
             const {data:jwt}=await axios.post("http://localhost:3900/api/clientauth/",{
                 email:email,
                 password:password
-            })       
+            })
             .then(
                 (response)=>{
-                    console.log(response);
-                    localStorage.setItem(tokenKey,jwt);
+                    console.log(response.headers);
+                    let response1 = response.headers
+                    let response2 = Object.values(response1)
+                    let response3 = response2[2]
+                    console.log(response3)
+                    localStorage.setItem(tokenKey,response3);
                     console.log("Logged In Successfully");
                 },
                 (error) =>{
@@ -61,13 +65,13 @@ const ClientLogin = () => {
         } catch (ex) {
             console.log(ex.response);
         }
-        
+
     }
 
     if(getCurrentUser()){
         return <Redirect to="/"/>;
     }
-    return ( 
+    return (
         <div className="login-img">
             <Navbar/>
                 <div className="boxlog">
@@ -75,14 +79,14 @@ const ClientLogin = () => {
                     <h1>Login</h1>
                         <form onSubmit={handleSubmit}>
                             <label>Email</label>
-                            <input 
+                            <input
                                 type="email"
                                 required
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                             />
                             <label>Password</label>
-                            <input 
+                            <input
                                 type="password"
                                 required
                                 value={password}
@@ -98,6 +102,6 @@ const ClientLogin = () => {
 
      );
 }
- 
+
 export default ClientLogin;
 
