@@ -12,6 +12,7 @@ const ClientLogin = () => {
     const tokenKey="token";
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
+    const [data]=useState("");
 
     setJwt(getJwt());
 
@@ -58,7 +59,7 @@ const ClientLogin = () => {
                 console.log(err);
             })
         } catch (ex) {
-            
+            console.log(ex.response);
         }
         
     }
@@ -99,3 +100,4 @@ const ClientLogin = () => {
 }
  
 export default ClientLogin;
+
