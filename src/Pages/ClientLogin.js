@@ -35,11 +35,11 @@ const ClientLogin = () => {
         }
     }
 
-    const  handleSubmit = async(e) =>{
+    const  handleSubmit = (e) =>{
         e.preventDefault();
 
         try {
-            const {data:jwt}=await axios.post("http://localhost:3900/api/clientauth/",{
+            axios.post("http://localhost:3900/api/clientauth/",{
                 email:email,
                 password:password
             })
@@ -69,7 +69,7 @@ const ClientLogin = () => {
     }
 
     if(getCurrentUser()){
-        return <Redirect to="/"/>;
+        return <Redirect to="/abcleisure"/>;
     }
     return (
         <div className="login-img">
