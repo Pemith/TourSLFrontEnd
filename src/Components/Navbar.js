@@ -1,8 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import "./Navbar.css";
 import LogoImg from "../Images/Yaka.png";
+import login from '../Pages/ClientLogin';
+import React from "react";
 
 const Navbar = () => {
+
+  let user;
+  if(login.getCurrentUser()){
+    user=true;
+    return user;
+  }
   return (
     <>
       <nav className="navbar">
@@ -12,9 +20,17 @@ const Navbar = () => {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
             <h2> Tour SL</h2>
-            {/* <i class="fab fa-typo3" /> */}
           </Link>
         </div>
+        {/* {user && (
+          <React.Fragment>
+            <NavLink to='/login'>
+              <button>LogOut</button>
+            </NavLink>
+          </React.Fragment>
+          
+        )} */}
+
       </nav>
     </>
   );

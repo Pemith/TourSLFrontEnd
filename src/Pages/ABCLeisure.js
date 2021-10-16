@@ -1,9 +1,12 @@
+import { Component } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-
 import '../CSS/ABCLeisure.css';
 
+
+
 const ABCLeisure = () => {
+
     return ( 
 
         <div className='reception'>

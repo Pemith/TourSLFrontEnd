@@ -35,6 +35,7 @@ const ClientLogin = () => {
         }
     }
 
+
     const  handleSubmit = (e) =>{
         e.preventDefault();
 
@@ -101,7 +102,10 @@ const ClientLogin = () => {
         </div>
 
      );
-}
+
+     
+};
 
 export default ClientLogin;
+
 
