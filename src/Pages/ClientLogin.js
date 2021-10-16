@@ -1,19 +1,21 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import { useState } from 'react';
-import { Redirect } from 'react-router';
+import { Redirect,useHistory } from 'react-router-dom';
 import '../CSS/ClientLogin.css';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
-import { toast } from "react-toastify"
+import { toast } from "react-toastify";
+
 
 const ClientLogin = () => {
 
     const tokenKey="token";
+    const isLoggedIn="isLoggedIn";
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [data]=useState("");
-
+    const history=useHistory();
     setJwt(getJwt());
 
     function setJwt(jwt){
@@ -46,13 +48,16 @@ const ClientLogin = () => {
             })
             .then(
                 (response)=>{
+                    console.log(response);
                     console.log(response.headers);
                     let response1 = response.headers
                     let response2 = Object.values(response1)
                     let response3 = response2[2]
                     console.log(response3)
                     localStorage.setItem(tokenKey,response3);
-                    console.log("Logged In Successfully");
+                    localStorage.setItem(isLoggedIn,true);
+                    // history.push('/abcleisure');
+                    window.location.reload();
                 },
                 (error) =>{
                     console.log(error);
@@ -70,7 +75,7 @@ const ClientLogin = () => {
     }
 
     if(getCurrentUser()){
-        return <Redirect to="/abcleisure"/>;
+        return <Redirect to="/abcleisure" />
     }
     return (
         <div className="login-img">

@@ -7,6 +7,8 @@ import '../CSS/ABCLeisure.css';
 
 const ABCLeisure = () => {
 
+    
+
     return ( 
 
         <div className='reception'>
@@ -14,15 +16,7 @@ const ABCLeisure = () => {
             <Navbar/>
 
             <div className="ABC"></div>
-            <div class="dropdown">
-                <button class="dropbtn">Locations</button>
-                <div class="dropdown-content">
-                    <a href="#">Matara</a>
-                    <a href="#">Galle</a>
-                    <a href="#">Hambanthota</a>
-                </div>
-            </div>
-            <div className="middletext"><h4>Packages</h4></div>
+            <button class="dropbtn">Location</button>
                
             <button class='menu'>Package 01 : Surfing</button>
             <button class='menu'>Package 02 : Snorkeling</button>

@@ -26,6 +26,22 @@
   position: relative;
 }
 
+.navbar-container button{
+  background: black;
+  color: #fff;
+  border: 0;
+  padding: 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  padding: 12px 50px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -50%;
+  margin-left: 72%;
+}
+
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;

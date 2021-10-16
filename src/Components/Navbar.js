@@ -6,10 +6,14 @@ import React from "react";
 
 const Navbar = () => {
 
-  let user;
-  if(login.getCurrentUser()){
-    user=true;
-    return user;
+  const tokenKey="token";
+  const isLoggedIn="isLoggedIn";
+
+  const user=localStorage.getItem('isLoggedIn');
+  function logOut(){
+    localStorage.removeItem(tokenKey);
+    localStorage.removeItem(isLoggedIn);
+    window.location="/";
   }
   return (
     <>
@@ -21,15 +25,16 @@ const Navbar = () => {
           <Link to="/" className="navbar-logo">
             <h2> Tour SL</h2>
           </Link>
-        </div>
-        {/* {user && (
+
+          {user && (
           <React.Fragment>
-            <NavLink to='/login'>
-              <button>LogOut</button>
+            <NavLink to='/'>
+              <button onClick={logOut}> Log Out</button>
             </NavLink>
-          </React.Fragment>
-          
-        )} */}
+          </React.Fragment>      
+          )}
+        </div>
+        
 
       </nav>
     </>

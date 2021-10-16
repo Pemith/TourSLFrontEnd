@@ -70,6 +70,8 @@ const Sregistration = () => {
     
   };
 
+  
+
   return (
     <div className="sreg-img">
       <Navbar />
