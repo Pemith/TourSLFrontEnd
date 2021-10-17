@@ -12,7 +12,7 @@ const Sregistration = () => {
   const [companyName, setCompanyName] = useState("");
   const [serviceType, setServiceType] = useState("Activity Provider");
   const [address, setAddress] = useState("");
-  const [district, setDistrict] = useState("");
+  const [district, setDistrict] = useState("Kandy");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history=useHistory();
@@ -102,12 +102,35 @@ const Sregistration = () => {
               onChange={e => setAddress(e.target.value)}
             />
             <label>District</label>
-            <input
-              type="text"
-              required
+            <select
               value={district}
               onChange={e => setDistrict(e.target.value)}
-            />
+            >
+              <option value="Ampara">Ampara</option>
+              <option value="Anuradhapura">Anuradhapura</option>
+              <option value="Badulla">Badulla</option>
+              <option value="Batticoloa">Batticoloa</option>
+              <option value="Colombo">Colombo</option>
+              <option value="Galle">Galle</option>
+              <option value="Gampaha">Gampaha</option>
+              <option value="Hambantota">Habantota</option>
+              <option value="Jaffna">Jaffna</option>
+              <option value="Kalutara">Kalutara</option>
+              <option value="Kandy">Kandy</option>
+              <option value="Kegalle">Kegalle</option>
+              <option value="Kilinochchi">Kilinochchi</option>
+              <option value="Kurunegala">Kurunegala</option>
+              <option value="Mannar">Mannar</option>
+              <option value="Matale">Matale</option>
+              <option value="Monaragala">Monaragala</option>
+              <option value="Mullativu">Mullativu</option>
+              <option value="Nuwara_Eliya">Nuwara Eliya</option>
+              <option value="Polonnaruwa">Polonnaruwa</option>
+              <option value="Puttalam">Puttalam</option>
+              <option value="Rathnapura">Rathnapura</option>
+              <option value="Trincomalee">Trincomalee</option>
+              <option value="Vavuniya">Vavuniya</option>
+            </select>
             <label>Email</label>
             <input
               type="email"

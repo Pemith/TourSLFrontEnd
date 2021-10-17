@@ -13,27 +13,33 @@ const Navbar = () => {
   function logOut(){
     localStorage.removeItem(tokenKey);
     localStorage.removeItem(isLoggedIn);
-    window.location="/";
+    // window.location="/home";
   }
   return (
     <>
       <nav className="navbar">
         <div className="nav-img">
-          <img src={LogoImg} alt="Invalid"/>
-        </div>
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo">
-            <h2> Tour SL</h2>
+          <Link to="/">
+            <img src={LogoImg} alt="Logo"/>
           </Link>
-
-          {user && (
-          <React.Fragment>
-            <NavLink to='/'>
-              <button onClick={logOut}> Log Out</button>
-            </NavLink>
-          </React.Fragment>      
-          )}
         </div>
+      
+          
+        <h2>Tour SL</h2>
+
+
+        {user && (
+          <React.Fragment>
+            <NavLink to='/home'>            
+              <ul>
+                <li>
+                  <button onClick={logOut}>Log Out</button>
+                </li>
+              </ul>
+            </NavLink>
+          </React.Fragment>
+        )}
+      
         
 
       </nav>
