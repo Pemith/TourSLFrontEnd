@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import { useParams } from 'react-router';
+import { useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import '../CSS/ABCLeisure.css';
@@ -7,12 +8,15 @@ import '../CSS/TastyRes.css';
 
 const ClientDashboard = () => {
 
+    const {id}=useParams();
     const type=localStorage.getItem('type');
     console.log(type);
     let isRestaurant;
     if (type==="Restaurant"){
         isRestaurant=true;
     }
+
+    
 
 
     return ( 
@@ -24,8 +28,6 @@ const ClientDashboard = () => {
             <div className="food"></div>
             <button class="dropbtn">Location</button>
             {/* <div className="middletext"><h4>Packages</h4></div> */}            
-            <button class='menu'>Menu 01: Cuisine Type (PDF)s</button>
-            <button class='menu'>Menu 02: Cuisine Type (PDF)</button>
             <button class='menu'>Add Menu (PDF) +</button>
             
             <Footer/>

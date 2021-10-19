@@ -66,7 +66,7 @@ const ClientLogin = () => {
                     localStorage.setItem(isLoggedIn,true);
                     localStorage.setItem(type,data3);
                     // history.push('/abcleisure');
-                    window.location.reload();
+                    // window.location.reload();
                 },
                 (error) =>{
                     console.log(error);
@@ -83,34 +83,6 @@ const ClientLogin = () => {
 
     }
 
-    // function directPage(serviveType){
-
-
-       
-    //     if (serviveType === 'Activity Provider') {
-    //         console.log('Activity Provider Condition Runned');
-    //         return <Redirect to="/abcleisure" />
-    //     }
-
-    //     if (serviveType === 'Restaurant') {
-    //         console.log('Restaurant Condition Runned');
-    //         return <Redirect to="/restaurant" />
-    //     }
-
-    //     else {
-    //         toast.error("Invalid Organization Type");
-    //     }
-        
-        // if( getCurrentUser() && serviveType==='Activity Provider'){
-        //     console.log('Activity Provider Condition Runned');
-        //     return <Redirect to="/abcleisure" />
-        // }
-
-        // else if(getCurrentUser() && serviveType==='Restaurant'){
-        //     console.log('Restaurant Condition Runned');
-        //     return <Redirect to="/restaurant" />
-        // }
-    // }
     
     if(getCurrentUser()){      
         return <Redirect to="/clientdashboard" />
