@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 
 const ClientLogin = () => {
 
+    let type="type";
     const tokenKey="token";
     const isLoggedIn="isLoggedIn";
     const [email,setEmail]=useState("");
@@ -49,13 +50,21 @@ const ClientLogin = () => {
             .then(
                 (response)=>{
                     console.log(response);
-                    console.log(response.headers);
-                    let response1 = response.headers
-                    let response2 = Object.values(response1)
-                    let response3 = response2[2]
-                    console.log(response3)
+                    // console.log(response.headers);
+                    let response1 = response.headers;
+                    let response2 = Object.values(response1);
+                    let response3 = response2[2];
+
+                    let data1=response.data;
+                    let data2=Object.values(data1);
+                    let data3=data2[2];
+                    
+
+                    // console.log(response3);
+                    console.log(data3);
                     localStorage.setItem(tokenKey,response3);
                     localStorage.setItem(isLoggedIn,true);
+                    localStorage.setItem(type,data3);
                     // history.push('/abcleisure');
                     window.location.reload();
                 },
@@ -74,8 +83,37 @@ const ClientLogin = () => {
 
     }
 
-    if(getCurrentUser()){
-        return <Redirect to="/abcleisure" />
+    // function directPage(serviveType){
+
+
+       
+    //     if (serviveType === 'Activity Provider') {
+    //         console.log('Activity Provider Condition Runned');
+    //         return <Redirect to="/abcleisure" />
+    //     }
+
+    //     if (serviveType === 'Restaurant') {
+    //         console.log('Restaurant Condition Runned');
+    //         return <Redirect to="/restaurant" />
+    //     }
+
+    //     else {
+    //         toast.error("Invalid Organization Type");
+    //     }
+        
+        // if( getCurrentUser() && serviveType==='Activity Provider'){
+        //     console.log('Activity Provider Condition Runned');
+        //     return <Redirect to="/abcleisure" />
+        // }
+
+        // else if(getCurrentUser() && serviveType==='Restaurant'){
+        //     console.log('Restaurant Condition Runned');
+        //     return <Redirect to="/restaurant" />
+        // }
+    // }
+    
+    if(getCurrentUser()){      
+        return <Redirect to="/clientdashboard" />
     }
     return (
         <div className="login-img">

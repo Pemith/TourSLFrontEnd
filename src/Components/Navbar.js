@@ -8,11 +8,14 @@ const Navbar = () => {
 
   const tokenKey="token";
   const isLoggedIn="isLoggedIn";
+  let type="type";
 
   const user=localStorage.getItem('isLoggedIn');
   function logOut(){
     localStorage.removeItem(tokenKey);
     localStorage.removeItem(isLoggedIn);
+    localStorage.removeItem(type);
+
     // window.location="/home";
   }
   return (
