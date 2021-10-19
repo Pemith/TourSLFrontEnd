@@ -9,14 +9,14 @@ import Activities from "./Pages/Activities";
 import Leisure from "./Pages/Leisure";
 import Lighthouse from "./Pages/LightHouse";
 import ClientLogin from "./Pages/ClientLogin";
+import ClientDashboard from "./Pages/ClientDashboard";
 import Sregistration from "./Pages/Sregistration";
 import ActivityProvider from "./Pages/ActivityProviderRegistration";
-import ABCLeisure from "./Pages/ABCLeisure";
 import TastyRes from "./Pages/TastyRes";
 import ABCPackagename from "./Pages/ABCPackagename";
 import MenuUpload from "./Pages/MenuUpload";
 import Profile from "./Pages/Profile";
-import RestaurantRegistration from "./Pages/RestaurantRegistration";
+import LegalDocuments from "./Pages/LegalDocuments";
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -54,20 +54,20 @@ function App() {
           <Route exact path="/login">
             <ClientLogin/>
           </Route>
+          <Route exact path="/clientdashboard">
+            <ClientDashboard/>
+          </Route>
           <Route exact path="/sreg">
             <Sregistration/>
           </Route>
           <Route exact path="/apreg">
             <ActivityProvider/>
           </Route>
-          <Route exact path="/resreg">
-            <RestaurantRegistration/>
+          <Route exact path="/legal">
+            <LegalDocuments/>
           </Route>
-          <Route exact path='/tastyres'>
+          <Route exact path='/restaurant'>
             <TastyRes/>
-          </Route>
-          <Route exact path='/abcleisure'> 
-          <ABCLeisure/>
           </Route>
           <Route exact path='/ABCPackagename'>
             <ABCPackagename/>

@@ -8,7 +8,9 @@ const Home = () => {
         <div className="home">
             <div className="boxhome">
                 <div className="boxhome-img">
-                    <img src={logoImg} alt="logo" />
+                    <Link to='/'>
+                        <img src={logoImg} alt="logo" />
+                    </Link>                  
                 </div>
                 <h1>Tour SL</h1>
             </div>
