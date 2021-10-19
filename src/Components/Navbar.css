@@ -10,6 +10,7 @@
   z-index: 1;
   /* flex: 1; */
   /* border: 1px solid red; */
+
 }
 
 
@@ -19,7 +20,7 @@
   position: fixed;
   margin-top:-0.1%;
   margin-left: 2%;
-  
+
 }
 
 /* .navbar-container {

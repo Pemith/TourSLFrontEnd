@@ -1,16 +1,13 @@
-.activity-list{
-    background-image: url('../Images/Surf.jpg');
+.site-list{
+    background-image: url('../Images/site6.jpg');
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    position: fixed;
+    position: absolute;
 }
-
-  .ablock {
+.sblock {
     text-align: center;
     margin: 30px 20px;
     padding: 10px;
@@ -22,7 +19,7 @@
     margin-left: 30%;
   }
   
-  .ablock:hover {
+  .sblock:hover {
     background-color: rgba(120, 160, 194, 0.822);
     color: black;
     transition: 00.5s;

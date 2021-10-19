@@ -3,6 +3,14 @@
     background-size: cover;
 }
 
+#video{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height:initial;
+    object-fit: cover;
+}
+
 .reception-img {
     display: block;
     margin-left: auto;
@@ -13,8 +21,8 @@
     height: 40%;
 }
 
-.reception-p{
-    color: black;
+.reception-p p{
+    color: white;
     margin-top: 7%;
     margin-left: 10%;
     margin-right: 50%;
@@ -22,7 +30,7 @@
 
 .reception h1{
     font-size: 25px;
-    color: black;
+    color: white;
     margin-top: 5%;
     margin-left: 10%;
 }
