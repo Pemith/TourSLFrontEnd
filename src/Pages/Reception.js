@@ -10,7 +10,7 @@ import '../CSS/Reception.css';
 const Reception = () => {
 
     const [selectedDistrict, setSelectedDistric]=useState("");
-    const sD="sD";
+    const sD="sd";
     const history=useHistory();
 
     const handleSubmit =(e) =>{
