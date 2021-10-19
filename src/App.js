@@ -12,7 +12,7 @@ import ClientLogin from "./Pages/ClientLogin";
 import ClientDashboard from "./Pages/ClientDashboard";
 import Sregistration from "./Pages/Sregistration";
 import ActivityProvider from "./Pages/ActivityProviderRegistration";
-import RestaurantRegistration from "./Pages/RestaurantRegistration";
+// import RestaurantRegistration from "./Pages/RestaurantRegistration";
 import ABCPackagename from "./Pages/ABCPackagename";
 import MenuUpload from "./Pages/MenuUpload";
 import Profile from "./Pages/Profile";
