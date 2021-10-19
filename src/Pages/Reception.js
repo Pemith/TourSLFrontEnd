@@ -2,23 +2,19 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import slImg from '../Images/sriLankaHigh.png';
 import backgroundVideo from '../Images/Video4.mp4';
-import { useState } from 'react';
-import { useHistory } from 'react-router';
-
+import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import '../CSS/Reception.css';
+import Activities from './Activities';
 
 const Reception = () => {
-
-    const [selectedDistrict, setSelectedDistric]=useState("");
-    const sD="sD";
-    const history=useHistory();
-
-    const handleSubmit =(e) =>{
-        localStorage.setItem(sD,selectedDistrict);
-        history.push("/");
+    const [selectedDistrict, setSelectedDistrict] = useState(null)
+    const sD = 'sd';
+    const history = useHistory();
+    const handleSubmit = (e) => {
+        localStorage.setItem(sD, selectedDistrict);
+        history.push('/districtname');
     }
-
-    
     return (
         
         <>
@@ -37,10 +33,10 @@ const Reception = () => {
                 </div>
                 <h1>Choose your District</h1>
                 <div className="choose">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={ handleSubmit }>
                         <select
                             value={selectedDistrict}
-                            onChange={e => setSelectedDistric(e.target.value)}
+                            onChange={e => setSelectedDistrict(e.target.value)}
                         >
                             <option value="Ampara">Ampara</option>
                             <option value="Anuradhapura">Anuradhapura</option>
@@ -67,10 +63,9 @@ const Reception = () => {
                             <option value="Trincomalee">Trincomalee</option>
                             <option value="Vavuniya">Vavuniya</option>
                         </select>
-                        <button>Go</button>
-                    </form>
+                        <button>Go!</button>
+                    </form >
                 </div>
-
                 <Footer />
             </div></>
         

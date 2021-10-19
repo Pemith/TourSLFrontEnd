@@ -19,9 +19,11 @@ import ActivityList from "./ActivityList";
 
 const Activities = () => {
   const [activities, setActivities] = useState(null)
+  const sD = 'sd';
+  const District = localStorage.getItem(sD);
 
   useEffect(() => {
-    fetch('http://localhost:3900/api/activityprovider')
+    fetch('http://localhost:3900/api/client')
       .then(res => {
         return res.json();
       })
@@ -33,7 +35,7 @@ const Activities = () => {
   return (
     <div className="activity-list">
         <Navbar />
-        {activities && <ActivityList activities={activities} />}
+        {activities && <ActivityList activities={activities.filter(activity => activity.district === District)} />}
         <Footer />
     </div>
   );

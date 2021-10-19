@@ -4,7 +4,7 @@ const ActivityList = ({ activities }) => {
         <div className="activity-list">
             {activities.map(activity => (
                <div className="ablock" key={activity._id}>
-                   <h2>{activity.activityType}</h2>
+                   <h2>{activity.companyName}</h2>
                </div>     
             ))}
         </div>

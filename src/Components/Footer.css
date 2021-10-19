@@ -6,7 +6,7 @@
   height: 12.7%;
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
   color: #000000;
-  position:fixed;
+  position:relative;
   left: 0;
   top:85%;
   bottom: 0;
