@@ -3,10 +3,10 @@
   padding: 10px 0px;
   width: initial;
   clear: both;
-  height: 12.7%;
+  height: 15%;
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
   color: #000000;
-  position:fixed;
+  position:relative;
   left: 0;
   top:85%;
   bottom: 0;

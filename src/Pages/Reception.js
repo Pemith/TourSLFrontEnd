@@ -3,7 +3,7 @@ import Footer from '../Components/Footer';
 import slImg from '../Images/sriLankaHigh.png';
 import backgroundVideo from '../Images/Video4.mp4';
 import { useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 import '../CSS/Reception.css';
 
@@ -15,7 +15,7 @@ const Reception = () => {
 
     const handleSubmit =(e) =>{
         localStorage.setItem(sD,selectedDistrict);
-        history.push("/");
+        history.push("/districtname");
     }
 
     
@@ -67,7 +67,7 @@ const Reception = () => {
                             <option value="Trincomalee">Trincomalee</option>
                             <option value="Vavuniya">Vavuniya</option>
                         </select>
-                        <button>Go</button>
+                        <button>Go!</button>
                     </form>
                 </div>
 
