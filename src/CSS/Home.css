@@ -1,9 +1,12 @@
 .home{
     height: 100%;
     width: 100%;
-    background-color: #04395E;
+    background-image: url('../Images/Ella\ Railway.jpg');
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
     position: absolute;
     justify-items: center;
     justify-content: center;
@@ -26,7 +29,7 @@
 
 .boxhome-img{ 
     height: 35%;
-    top: 10%;   
+    top: 18%;   
     position:absolute;
     margin-left: auto;
     margin-right:auto ; 
@@ -43,7 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 250px;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -52,7 +55,8 @@
 
 .home button{
     background-color: #DAB785  ;
-    border-radius: 20px;
+    border:0px;
+    border-radius: 45px;
     color: black;
     font-size: 30px;
     font-weight: bold;
@@ -64,7 +68,7 @@
     display: inline-block;
     cursor: pointer;
     margin-top: 28%;
-    margin-left: 4%;
+    margin-left: 1%;
     margin-right: 4%;
     
 }
