@@ -1,27 +1,31 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import slImg from '../Images/sriLankaHigh.png';
+import backgroundVideo from '../Images/Video4.mp4';
 
 import '../CSS/Reception.css';
 
 const Reception = () => {
+    
     return (
         
-        
+        <>
         <div className='reception'>
-            <Navbar/>             
+                <Navbar />
+                <video autoPlay loop muted id='video'>
+                    <source src={backgroundVideo} type='video/mp4'/>
+                </video>
                 <div className="reception-img">
-                    <img src={slImg}/>
-                </div>     
+                    <img src={slImg} />
+                </div>
                 <div className='reception-p'>
-                    
                     <p>
-                    Sri Lanka is an island country located off the southern coast of India. Sri Lanka is surrounded by the Indian Ocean, Gulf of Mannar, the Palk Strait, and lies in the vicinity of India and the Maldives. The geography of Sri Lanka includes coastal plains in the north and hills and mountains in the interior.
+                        Sri Lanka is an island country located off the southern coast of India. Sri Lanka is surrounded by the Indian Ocean, Gulf of Mannar, the Palk Strait, and lies in the vicinity of India and the Maldives. The geography of Sri Lanka includes coastal plains in the north and hills and mountains in the interior.
                     </p>
-                </div>    
+                </div>
                 <h1>Choose your District</h1>
-                <div className="choose">                    
-                    <form >
+                <div className="choose">
+                    <form>
                         <select>
                             <option value="Ampara">Ampara</option>
                             <option value="Anuradhapura">Anuradhapura</option>
@@ -50,9 +54,9 @@ const Reception = () => {
                         </select>
                     </form>
                 </div>
-               
-            <Footer/>
-        </div>
+
+                <Footer />
+            </div></>
         
         
         

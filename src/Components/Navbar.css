@@ -9,6 +9,7 @@
   top: 0;
   z-index: 999;
   flex: 1;
+  border: 1px solid red;
 }
 
 .nav-img {
@@ -16,6 +17,7 @@
   float: left;
   position: relative;
   margin-left: 2%;
+  border: 1px solid red;
 }
 
 .navbar-container {
@@ -34,6 +36,7 @@
 .navbar h2 {
   color: #110000;
   margin-left: 47.15%;
+  border: 1px solid red;
 }
 .navbar .links {
   margin-left: 0%;
