@@ -6,7 +6,7 @@ import RegisterLogin from "./Pages/RegisterLogin";
 import Reception from "./Pages/Reception";
 import DistrictName from "./Pages/DistrictName";
 import Activities from "./Pages/Activities";
-import Leisure from "./Pages/Leisure";
+import SiteDetails from "./Pages/SiteDetails";
 import Lighthouse from "./Pages/LightHouse";
 import ClientLogin from "./Pages/ClientLogin";
 import ClientDashboard from "./Pages/ClientDashboard";
@@ -48,8 +48,8 @@ function App() {
           <Route exact path="/activities">
             <Activities/>
           </Route>
-          <Route exact path="/leisure">
-            <Leisure/>
+          <Route exact path="/sites/:id">
+            <SiteDetails/>
           </Route>
           <Route exact path="/lighthouse">
             <Lighthouse/>
