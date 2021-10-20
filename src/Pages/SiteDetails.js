@@ -23,7 +23,15 @@ const SiteDetails = () => {
         <Navbar />
         {site && (
             <article>
-                <h2>Details - { site.description }</h2>
+                <h1>{ site.name }<br/><br/></h1>
+                <h2>District</h2>
+                <p>{ site.district }<br/><br/></p>
+                <h2>Site Type</h2>
+                <p>{ site.siteType }<br/><br/></p>
+                <h2>Open Hrs</h2>
+                <p>{ site.openHrs }<br/><br/></p>
+                <h2>Description</h2>
+                <p>{ site.description }<br/><br/></p>
             </article>
         )}
         <Footer />
