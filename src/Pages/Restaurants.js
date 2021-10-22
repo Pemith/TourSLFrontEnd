@@ -8,22 +8,30 @@ import '../CSS/Activities.css';
 import RestaurantList from "./RestaurantList";
 
 const Restaurants = () => {
-  const [restaurants, setRestaurants] = useState(null)
+  const [restaurants, setRestaurants] = useState(null);
+  const sD='sd';
+  const District=localStorage.getItem(sD);
 
   useEffect(() => {
-    fetch('http://localhost:3900/api/restaurant')
+    fetch('http://localhost:3900/api/client')
       .then(res => {
+        console.log(res);
         return res.json();
       })
       .then(data => {
+        console.log(data);
         setRestaurants(data);
       })
   }, [])
 
   return (
-    <div className="restaurant-list">
+    <div className="restaurantmain">
         <Navbar />
-        {restaurants && <RestaurantList restaurants={restaurants} />}
+        {restaurants && <RestaurantList 
+          restaurants={restaurants.filter(
+            rest => rest.district === District 
+            && rest.serviceType==="Restaurant")
+        } />}
         <Footer />
     </div>
   );

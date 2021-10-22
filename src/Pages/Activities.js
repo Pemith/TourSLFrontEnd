@@ -35,7 +35,11 @@ const Activities = () => {
   return (
     <div className="activity-list">
         <Navbar />
-        {activities && <ActivityList activities={activities.filter(activity => activity.district === District)} />}
+        {activities && <ActivityList 
+          activities={activities.filter(
+            activity => activity.district === District
+            && activity.serviceType==="Activity"
+          )} />}
         <Footer />
     </div>
   );

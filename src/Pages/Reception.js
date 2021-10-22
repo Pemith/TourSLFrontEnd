@@ -35,13 +35,14 @@ const Reception = () => {
                         Sri Lanka is an island country located off the southern coast of India. Sri Lanka is surrounded by the Indian Ocean, Gulf of Mannar, the Palk Strait, and lies in the vicinity of India and the Maldives. The geography of Sri Lanka includes coastal plains in the north and hills and mountains in the interior.
                     </p>
                 </div>
-                <h1>Choose your District</h1>
+                <h1>Choose Your Preferred District</h1>
                 <div className="choose">
                     <form onSubmit={handleSubmit}>
                         <select
                             value={selectedDistrict}
                             onChange={e => setSelectedDistric(e.target.value)}
                         >
+                            <option value="" selected disabled hidden>Select Your District</option>
                             <option value="Ampara">Ampara</option>
                             <option value="Anuradhapura">Anuradhapura</option>
                             <option value="Badulla">Badulla</option>
@@ -67,7 +68,7 @@ const Reception = () => {
                             <option value="Trincomalee">Trincomalee</option>
                             <option value="Vavuniya">Vavuniya</option>
                         </select>
-                        <button>Go!</button>
+                        {selectedDistrict && <button>Go!</button>}
                     </form>
                 </div>
 

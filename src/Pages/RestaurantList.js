@@ -1,10 +1,14 @@
+import {Link} from 'react-router-dom';
 import '../CSS/Activities.css';
+
 const RestaurantList = ({ restaurants }) => {
     return (
-        <div className="activity-list">
+        <div className="restaurantmain">
             {restaurants.map(restaurant => (
                <div className="block" key={restaurant._id}>
-                   <h2>{restaurant.activityType}</h2>
+                    <Link to={`/menuupload/${restaurant._id}`}>
+                        <h2>{restaurant.companyName}</h2>
+                    </Link>                     
                </div>     
             ))}
         </div>
