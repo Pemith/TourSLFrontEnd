@@ -39,4 +39,6 @@ const SiteDetails = () => {
   );
 }
  
+
 export default SiteDetails;
+

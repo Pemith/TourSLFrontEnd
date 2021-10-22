@@ -18,7 +18,9 @@ import '../CSS/Activities.css';
 import ActivityList from "./ActivityList";
 
 const Activities = () => {
-  const [activities, setActivities] = useState(null);
+
+  const [activities, setActivities] = useState(null)
+
   const sD = 'sd';
   const District = localStorage.getItem(sD);
 
@@ -35,11 +37,7 @@ const Activities = () => {
   return (
     <div className="activity-list">
         <Navbar />
-        {activities && <ActivityList 
-          activities={activities.filter(
-            activity => activity.district === District
-            && activity.serviceType==="Activity"
-          )} />}
+        {activities && <ActivityList activities={activities.filter(activity => activity.district === District && activity.serviceType==="Activity Provider")} />}
         <Footer />
     </div>
   );

@@ -2,10 +2,12 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import slImg from '../Images/sriLankaHigh.png';
 import backgroundVideo from '../Images/Video4.mp4';
+
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import '../CSS/Reception.css';
+import Activities from './Activities';
 
 const Reception = () => {
 
@@ -16,9 +18,8 @@ const Reception = () => {
     const handleSubmit =(e) =>{
         localStorage.setItem(sD,selectedDistrict);
         history.push("/districtname");
-    }
 
-    
+    }
     return (
         
         <>
@@ -37,10 +38,10 @@ const Reception = () => {
                 </div>
                 <h1>Choose Your Preferred District</h1>
                 <div className="choose">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={ handleSubmit }>
                         <select
                             value={selectedDistrict}
-                            onChange={e => setSelectedDistric(e.target.value)}
+                            onChange={e => setSelectedDistrict(e.target.value)}
                         >
                             <option value="" selected disabled hidden>Select Your District</option>
                             <option value="Ampara">Ampara</option>
@@ -68,10 +69,10 @@ const Reception = () => {
                             <option value="Trincomalee">Trincomalee</option>
                             <option value="Vavuniya">Vavuniya</option>
                         </select>
+
                         {selectedDistrict && <button>Go!</button>}
                     </form>
                 </div>
-
                 <Footer />
             </div></>
         

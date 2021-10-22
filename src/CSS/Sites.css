@@ -8,26 +8,27 @@
   position: absolute;
 }
 .sblock {
-  text-align: center;
-  margin: 30px 20px;
-  padding: 10px;
-  margin: 10px;
-  background: rgba(241, 241, 241, 0.685);
-  border-radius: 10px;
-  transition: all .2s ease-in-out;
-  width: 40%;
-  margin-left: 30%;
-  text-decoration: none;
-}
+    text-align: center;
+    margin: 30px 20px;
+    padding: 10px;
+    margin: 10px;
+    background: rgba(241, 241, 241, 0.685);
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    width: 40%;
+    margin-left: 30%;
+    text-decoration: none;
+  }
+  
+  .sblock:hover {
+    background-color: rgba(120, 160, 194, 0.822);
+    color: black;
+    transition: 00.5s;
+    transform: scale(1.1);
+  }
 
-.sblock:hover {
-  background-color: rgba(120, 160, 194, 0.822);
-  color: black;
-  transition: 00.5s;
-  transform: scale(1.1);
-}
+  .sblock a{
+    text-decoration: none;
+    color: initial;
+  }
 
-.sblock a{
-  text-decoration: none;
-  color: initial;
-}
