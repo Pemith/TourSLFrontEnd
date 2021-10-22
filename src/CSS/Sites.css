@@ -1,11 +1,11 @@
 .site-list{
-    background-image: url('../Images/site6.jpg');
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
+  background-image: url('../Images/site6.jpg');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
 }
 .sblock {
     text-align: center;
@@ -31,3 +31,4 @@
     text-decoration: none;
     color: initial;
   }
+

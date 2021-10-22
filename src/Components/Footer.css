@@ -3,7 +3,7 @@
   padding: 10px 0px;
   width: initial;
   clear: both;
-  height: 12.7%;
+  height: 15%;
   background: linear-gradient(90deg, #edece7 0%, #edece7 100%);
   color: #000000;
   position:relative;
@@ -74,5 +74,5 @@ p {
   margin: 0;
   font-weight: bold;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
