@@ -7,6 +7,7 @@ import Reception from "./Pages/Reception";
 import DistrictName from "./Pages/DistrictName";
 import Activities from "./Pages/Activities";
 import SiteDetails from "./Pages/SiteDetails";
+import ActivityDetails from "./Pages/ActivityDetails";
 import Lighthouse from "./Pages/LightHouse";
 import ClientLogin from "./Pages/ClientLogin";
 import ClientDashboard from "./Pages/ClientDashboard";
@@ -50,6 +51,9 @@ function App() {
           </Route>
           <Route exact path="/sites/:id">
             <SiteDetails/>
+          </Route>
+          <Route exact path="/activities/:id">
+            <ActivityDetails/>
           </Route>
           <Route exact path="/lighthouse">
             <Lighthouse/>
