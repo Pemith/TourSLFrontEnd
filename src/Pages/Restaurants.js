@@ -15,11 +15,11 @@ const Restaurants = () => {
   useEffect(() => {
     fetch('http://localhost:3900/api/client')
       .then(res => {
-        console.log(res);
+        // console.log(res);
         return res.json();
       })
       .then(data => {
-        console.log(data);
+        // console.log(data);
         setRestaurants(data);
       })
   }, [])

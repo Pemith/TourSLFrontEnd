@@ -56,7 +56,7 @@ function App() {
           <Route exact path="/activities/:id">
             <ActivityDetails/>
           </Route>
-          <Route exact path="/menuupload/:id">
+          <Route exact path="/menu/:id">
             <RestaurantDetails/>
           </Route>
           <Route exact path="/lighthouse">

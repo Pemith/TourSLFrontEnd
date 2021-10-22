@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import '../CSS/ABCLeisure.css';
@@ -12,11 +12,51 @@ const ClientDashboard = () => {
     const type=localStorage.getItem('type');
     console.log(type);
     let isRestaurant;
+    const [details,setDetails]=useState(null);
+
     if (type==="Restaurant"){
         isRestaurant=true;
+        // directFunction('menuupload');
     }
 
+    else{
+        isRestaurant=false;
+        // directFunction('packageupload');
+    }
+
+    // function directFunction(url){
+    //     const result=useEffect(()=>{
+    //         fetch('http://localhost:3900/api/'+url,{
+    //             method:'GET',
+    //             headers:{
+    //                 'Content-Type': 'application/json'
+    //             }
+    //         })
+    //         .then(async response =>{
+    //             try{
+    //                 const data=await response.json();
+    //                 console.log('response data?',data);
+    //                 return data;
+    //             }
+    //             catch(error){
+    //                 console.log('Error Occured');
+    //                 console.error(error);
+    //             }
+    //         })
+    //         .then(data =>{
+    //             setDetails(data);
+    //             console.log(data);
+    //         })
+    //         .catch((err)=>{
+    //             console.log(err.message);
+    //         })
+    //     },[]);
+
+    //     return result;
+    // }
     
+
+    console.log()
 
 
     return ( 
@@ -36,7 +76,7 @@ const ClientDashboard = () => {
 
 
         {!isRestaurant && (
-            <div className='reception'>
+            <div className='TastyRes'>
             <div className="abcgirls"></div>
             <Navbar/>
 

@@ -1,8 +1,26 @@
 import '../CSS/RegisterLogin.css'
 import logoImg from '../Images/Yaka.png';
-import {Link} from 'react-router-dom';
+import {Link,Redirect} from 'react-router-dom';
+import jwtDecode from 'jwt-decode';
 
 const RegisterLogin = () => {
+
+    const tokenKey="token";
+
+    function getCurrentUser(){
+        try{
+            const jwt=localStorage.getItem(tokenKey);
+            return jwtDecode(jwt);
+        }
+    
+        catch(ex){
+            return null;
+        }
+    }
+
+    if(getCurrentUser()){
+        return <Redirect to="/clientdashboard" />
+    }
     return ( 
 
         <div className="rlcontainer">

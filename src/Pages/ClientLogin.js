@@ -66,7 +66,7 @@ const ClientLogin = () => {
                     localStorage.setItem(isLoggedIn,true);
                     localStorage.setItem(type,data3);
                     // history.push('/abcleisure');
-                    // window.location.reload();
+                    window.location.reload();
                 },
                 (error) =>{
                     console.log(error);

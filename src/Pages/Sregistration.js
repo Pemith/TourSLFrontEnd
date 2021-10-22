@@ -3,7 +3,7 @@ import Footer from '../Components/Footer';
 import {useState,Component} from "react";
 import axios from "axios";
 import Joi from "joi-browser";
-import { useHistory,Link } from "react-router-dom";
+import { useHistory,Link,Redirect } from "react-router-dom";
 import { toast } from 'react-toastify';
 import '../CSS/Sregistration.css';
 
@@ -16,6 +16,8 @@ const Sregistration = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history=useHistory();
+  
+
 
 
   const handleSubmit = (e) => {

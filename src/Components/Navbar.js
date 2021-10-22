@@ -22,7 +22,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="nav-img">
-          <Link to="/">
+          <Link to="/home">
             <img src={LogoImg} alt="Logo"/>
           </Link>
         </div>
@@ -33,13 +33,14 @@ const Navbar = () => {
 
         {user && (
           <React.Fragment>
-            <NavLink to='/home'>            
-              <ul>
-                <li>
-                  <button onClick={logOut}>Log Out</button>
-                </li>
-              </ul>
-            </NavLink>
+              <NavLink to='/home'>            
+                <ul>
+                  <li>
+                    <button onClick={logOut}>Log Out</button>
+                  </li>
+                </ul>
+              </NavLink>
+            
           </React.Fragment>
         )}
       

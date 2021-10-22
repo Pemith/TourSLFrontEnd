@@ -5,8 +5,8 @@ const RestaurantList = ({ restaurants }) => {
     return (
         <div className="restaurantmain">
             {restaurants.map(restaurant => (
-               <div className="block" key={restaurant._id}>
-                    <Link to={`/menuupload/${restaurant._id}`}>
+               <div className="ablock" key={restaurant._id}>
+                    <Link to={`/menu/${restaurant._id}`}>
                         <h2>{restaurant.companyName}</h2>
                     </Link>                     
                </div>     

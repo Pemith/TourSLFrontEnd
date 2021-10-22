@@ -11,7 +11,7 @@ import Activities from './Activities';
 
 const Reception = () => {
 
-    const [selectedDistrict, setSelectedDistric]=useState("");
+    const [selectedDistrict, setSelectedDistrict]=useState("");
     const sD="sd";
     const history=useHistory();
 
@@ -69,8 +69,9 @@ const Reception = () => {
                             <option value="Trincomalee">Trincomalee</option>
                             <option value="Vavuniya">Vavuniya</option>
                         </select>
-
-                        {selectedDistrict && <button>Go!</button>}
+                        <div className="alignButton">
+                            {selectedDistrict && <button id="buttonGo">Lets Go!</button>}
+                        </div>         
                     </form>
                 </div>
                 <Footer />

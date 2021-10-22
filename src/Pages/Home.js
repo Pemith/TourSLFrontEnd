@@ -2,7 +2,10 @@ import '../CSS/Home.css'
 import logoImg from '../Images/Yaka.png';
 import {Link} from 'react-router-dom';
 
+
 const Home = () => {
+
+    
     return (
          
         <div className="home">
@@ -23,6 +26,7 @@ const Home = () => {
                 <Link to= '/registerlogin'>
                     <button>Shop Owner</button>
                 </Link>
+
             </div>
         </div>
         
