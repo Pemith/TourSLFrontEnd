@@ -65,7 +65,7 @@ function App() {
           <Route exact path="/login">
             <ClientLogin/>
           </Route>
-          <Route exact path="/clientdashboard">
+          <Route exact path="/clientdashboard/:id">
             <ClientDashboard/>
           </Route>
           <Route exact path="/sreg">
@@ -80,7 +80,7 @@ function App() {
           <Route exact path='/ABCPackagename'>
             <ABCPackagename/>
           </Route>
-          <Route exact path='/menuupload'>
+          <Route exact path='/menuupload/:id'>
             <MenuUpload/>
           </Route>
           <Route exact path='/profile'>

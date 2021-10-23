@@ -1,8 +1,8 @@
-import { useParams } from 'react-router';
+import { useParams,Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import '../CSS/ABCLeisure.css';
+// import '../CSS/ABCLeisure.css';
 import '../CSS/TastyRes.css';
 
 
@@ -10,87 +10,94 @@ const ClientDashboard = () => {
 
     const {id}=useParams();
     const type=localStorage.getItem('type');
+    let url;
+    var clientMenus=null;
+    var clientPackages=null;
     console.log(type);
     let isRestaurant;
     const [details,setDetails]=useState(null);
 
     if (type==="Restaurant"){
         isRestaurant=true;
-        // directFunction('menuupload');
+        url='menuupload';
+
+        try{
+            clientMenus=details.filter(packs=>packs.client._id===id);
+            console.log(clientMenus);
+        }catch(e){
+            console.log(e.message);
+        }
     }
 
     else{
         isRestaurant=false;
-        // directFunction('packageupload');
+        url='packageupload';
+
+        try{
+            clientPackages=details.filter(rest=>rest.client._id===id);
+            console.log(clientPackages);
+        }catch(e){
+            console.log(e.message);
+        }
     }
 
-    // function directFunction(url){
-    //     const result=useEffect(()=>{
-    //         fetch('http://localhost:3900/api/'+url,{
-    //             method:'GET',
-    //             headers:{
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         })
-    //         .then(async response =>{
-    //             try{
-    //                 const data=await response.json();
-    //                 console.log('response data?',data);
-    //                 return data;
-    //             }
-    //             catch(error){
-    //                 console.log('Error Occured');
-    //                 console.error(error);
-    //             }
-    //         })
-    //         .then(data =>{
-    //             setDetails(data);
-    //             console.log(data);
-    //         })
-    //         .catch((err)=>{
-    //             console.log(err.message);
-    //         })
-    //     },[]);
-
-    //     return result;
-    // }
     
-
-    console.log()
+        useEffect(()=>{
+            fetch('http://localhost:3900/api/'+url,{
+                method:'GET',
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(async response =>{
+                try{
+                    const data=await response.json();
+                    console.log('response data?',data);
+                    return data;
+                }
+                catch(error){
+                    console.log('Error Occured');
+                    console.error(error);
+                }
+            })
+            .then(data =>{
+                setDetails(data);
+                console.log(data);
+            })
+            .catch((err)=>{
+                console.log(err.message);
+            })
+        },[]);
+    
 
 
     return ( 
         <>
-
-        {isRestaurant && (
-            <div className='TastyRes'>
-            <Navbar/>
-            <div className="food"></div>
-            <button class="dropbtn">Location</button>
-            {/* <div className="middletext"><h4>Packages</h4></div> */}            
-            <button class='menu'>Add Menu (PDF) +</button>
-            
-            <Footer/>
-        </div>
-        )}
-
-
-        {!isRestaurant && (
-            <div className='TastyRes'>
-            <div className="abcgirls"></div>
-            <Navbar/>
-
-            <div className="ABC"></div>
-            <button class="dropbtn">Location</button>
-            
-            <button class='menu'>Package 01 : Surfing</button>
-            <button class='menu'>Package 02 : Snorkeling</button>
-            <button class='menu'>Add Package +</button>
-
-            
-            <Footer/>
-        </div>
-        )}    
+            <div className="food">
+                <Navbar />
+                
+                <button className="locButton">Location</button>
+                
+                {isRestaurant && clientMenus && clientMenus.map(menu =>{
+                return <div key={menu._id}>
+                    <button className='displayBtn'>{menu.mealType}: {menu.menuItem}<br/>LKR: {menu.price}/=</button>
+                    </div>}
+                )}
+                {!isRestaurant && clientPackages && clientPackages.map(pack =>{ 
+                    return <div key={pack._id}>
+                    {/* <div className="ABC"></div> */}                
+                    <button className='displayBtn'>{pack.packageName}<br/>
+                        LKR: {pack.price}/=
+                    </button>
+                    </div>}   
+                )}
+                <Link to={`/menuupload/${id}`}>
+                    <button className="addButton">Add+</button>
+                </Link>
+                
+                
+                <Footer />
+            </div>
             
         </>    
         

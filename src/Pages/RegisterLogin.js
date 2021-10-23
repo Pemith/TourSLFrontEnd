@@ -6,6 +6,7 @@ import jwtDecode from 'jwt-decode';
 const RegisterLogin = () => {
 
     const tokenKey="token";
+    const clientLocalId="clientId";
 
     function getCurrentUser(){
         try{
@@ -18,8 +19,9 @@ const RegisterLogin = () => {
         }
     }
 
-    if(getCurrentUser()){
-        return <Redirect to="/clientdashboard" />
+    const clientId=localStorage.getItem(clientLocalId);
+    if(getCurrentUser()){     
+        return <Redirect to={`/clientdashboard/${clientId}`} />
     }
     return ( 
 

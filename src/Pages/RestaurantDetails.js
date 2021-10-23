@@ -65,6 +65,7 @@ const RestaurantDetails =() => {
                 {resMenu && resMenu.map(menus =>{
                     return <div key={menus._id}>
                         <h2>{menus.menuItem}</h2>
+                        <h3>Meal Type: {menus.mealType}</h3>
                         <p>Portion Price LKR {menus.price}</p>
 
                     </div>

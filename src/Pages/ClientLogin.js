@@ -12,11 +12,13 @@ const ClientLogin = () => {
 
     let type="type";
     const tokenKey="token";
+    const clientLocalId="clientId";
     const isLoggedIn="isLoggedIn";
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [data]=useState("");
     const history=useHistory();
+
     setJwt(getJwt());
 
     function setJwt(jwt){
@@ -59,12 +61,14 @@ const ClientLogin = () => {
                     let data2=Object.values(data1);
                     let data3=data2[2];
                     
-
-                    // console.log(response3);
+                    let clientId=data2[0];
+                    console.log(response3);
                     console.log(data3);
+                    console.log(clientId);
                     localStorage.setItem(tokenKey,response3);
                     localStorage.setItem(isLoggedIn,true);
                     localStorage.setItem(type,data3);
+                    localStorage.setItem(clientLocalId,clientId);
                     // history.push('/abcleisure');
                     window.location.reload();
                 },
@@ -83,9 +87,9 @@ const ClientLogin = () => {
 
     }
 
-    
-    if(getCurrentUser()){      
-        return <Redirect to="/clientdashboard" />
+    const clientId=localStorage.getItem(clientLocalId);
+    if(getCurrentUser()){     
+        return <Redirect to={`/clientdashboard/${clientId}`} />
     }
     return (
         <div className="login-img">
