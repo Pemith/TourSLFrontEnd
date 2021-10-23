@@ -13,6 +13,9 @@ const Home = () => {
                 <div className="boxhome-img">
                     <Link to='/'>
                         <img src={logoImg} alt="logo" />
+                        {localStorage.removeItem("sd","destinationType")}
+                        {localStorage.removeItem("destinationType")}
+                        
                     </Link>                  
                 </div>
                 <h1>Tour SL</h1>
