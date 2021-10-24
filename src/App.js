@@ -12,6 +12,8 @@ import RestaurantDetails from "./Pages/RestaurantDetails";
 import Lighthouse from "./Pages/LightHouse";
 import ClientLogin from "./Pages/ClientLogin";
 import ClientDashboard from "./Pages/ClientDashboard";
+import ClientUpdatePage from "./Pages/ClientUpdatePage";
+import DeletePage from "./Pages/DeletePage";
 import Sregistration from "./Pages/Sregistration";
 import ActivityProvider from "./Pages/ActivityProviderRegistration";
 // import RestaurantRegistration from "./Pages/RestaurantRegistration";
@@ -23,6 +25,8 @@ import Restaurants from "./Pages/Restaurants";
 import LegalDocuments from "./Pages/LegalDocuments";
 
 import 'react-toastify/dist/ReactToastify.css';
+
+
 
 
 function App() {
@@ -67,6 +71,12 @@ function App() {
           </Route>
           <Route exact path="/clientdashboard/:id">
             <ClientDashboard/>
+          </Route>
+          <Route exact path="/clientupdate/:id">
+            <ClientUpdatePage/>
+          </Route>
+          <Route exact path="/delete/:id">
+            <DeletePage/>
           </Route>
           <Route exact path="/sreg">
             <Sregistration/>
