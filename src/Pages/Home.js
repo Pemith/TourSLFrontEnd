@@ -2,7 +2,10 @@ import '../CSS/Home.css'
 import logoImg from '../Images/Yaka.png';
 import {Link} from 'react-router-dom';
 
+
 const Home = () => {
+
+    
     return (
          
         <div className="home">
@@ -10,6 +13,9 @@ const Home = () => {
                 <div className="boxhome-img">
                     <Link to='/'>
                         <img src={logoImg} alt="logo" />
+                        {localStorage.removeItem("sd","destinationType")}
+                        {localStorage.removeItem("destinationType")}
+                        
                     </Link>                  
                 </div>
                 <h1>Tour SL</h1>
@@ -23,6 +29,7 @@ const Home = () => {
                 <Link to= '/registerlogin'>
                     <button>Shop Owner</button>
                 </Link>
+
             </div>
         </div>
         

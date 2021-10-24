@@ -9,6 +9,8 @@ import SiteList from "./SiteList";
 
 const Sites = () => {
   const [sites, setSites] = useState(null)
+  const sD = 'sd';
+  const District = localStorage.getItem(sD);
 
   useEffect(() => {
     fetch('http://localhost:3900/api/site')
@@ -23,7 +25,9 @@ const Sites = () => {
   return (
     <div className="site-list">
         <Navbar />
-        {sites && <SiteList sites={sites} />}
+        <div id="SlideBG">
+        {sites && <SiteList sites={sites.filter(site => site.district === District)} />}
+        </div>
         <Footer />
     </div>
   );

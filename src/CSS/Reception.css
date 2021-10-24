@@ -38,7 +38,9 @@
 .choose{
     max-width: 350px;
     margin-top: 2%;
-    margin-left: 9%;
+    margin-left: 10%;
+    padding: 0%;
+    /* border: 3px solid green;  */
 }
 
 .choose label {
@@ -54,4 +56,38 @@
     box-sizing: border-box;
     display: block;
     font-size: 20px;
+    cursor: pointer;
+}
+.choose select option{
+    cursor: pointer;
+}
+
+.alignButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 150px;
+    margin-left: 27%;
+    top: 20%;
+    /* border: 3px solid green;  */
+}
+
+#buttonGo{
+    background:  #f1356d;
+    color: #fff;
+    border: 0;
+    margin: 0%;
+    padding: 10px;
+    width: 100px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#buttonGo:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    transition: 0.25s;
 }

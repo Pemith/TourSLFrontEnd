@@ -27,7 +27,7 @@ function Footer() {
                         <p>
                             Contact Us
                             <hr style={{width:"150px"}} />
-                            toursl@xxx.com<br/>
+                            toursl@gmail.com<br/>
                             tel: 011-xxxxxxx
                         </p>
                     </div>
