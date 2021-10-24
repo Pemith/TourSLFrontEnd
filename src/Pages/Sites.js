@@ -25,7 +25,9 @@ const Sites = () => {
   return (
     <div className="site-list">
         <Navbar />
+        <div id="SlideBG">
         {sites && <SiteList sites={sites.filter(site => site.district === District)} />}
+        </div>
         <Footer />
     </div>
   );

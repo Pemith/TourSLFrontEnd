@@ -1,5 +1,5 @@
 .activity-list{
-    background-image: url('../Images/Surf.jpg');
+    /* background-image: url('../Images/Surf.jpg'); */
     height: 100%;
     width: 100%;
     margin: 0;
@@ -7,7 +7,41 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: fixed;
+    position: absolute;
+}
+
+#SlideBG{
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: slideBg 12s linear infinite 0s;
+  animation-timing-function: ease-in-out;
+  /* background-image: url('../Images/SurfingGirls.jpg'); */
+  animation-direction: alternate;
+}
+
+@keyframes slideBg{
+  0%{
+    background-image: url('../Images/Activity Slideshow/a1.jpg');
+  }
+  20%{
+    background-image: url('../Images/Activity Slideshow/a2.jpg');
+  }
+  40%{
+    background-image: url('../Images/Activity Slideshow/a3.jpg');
+  }
+  60%{
+    background-image: url('../Images/Activity Slideshow/a4.jpg');
+  }
+  80%{
+    background-image: url('../Images/Activity Slideshow/a7.jpg');
+  }
+  100%{
+    background-image: url('../Images/Activity Slideshow/Surf.jpg');
+  }
 }
 
   .ablock {
@@ -32,19 +66,9 @@
 
   .ablock a{
     text-decoration: none;
+    color: black;
   }
 
-  .restaurantmain{
-    background-image: url('../Images/SLFood.jpg');
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding:0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    justify-items: center;
-    justify-content: center;
-
+  .ablock a:visited{
+    text-decoration-color: none;
   }
