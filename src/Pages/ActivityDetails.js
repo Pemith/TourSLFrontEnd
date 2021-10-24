@@ -1,7 +1,7 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 
-import '../CSS/SiteDetails.css';
+import '../CSS/ActivityDetails.css';
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
@@ -50,7 +50,7 @@ const ActivityDetails = () => {
 
   return(
     console.log(clientPackages),
-      <div className="site-details">
+      <div className="activity-details">
         {console.log(packages)}
           <Navbar/>
           <article>
