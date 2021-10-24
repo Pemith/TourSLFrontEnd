@@ -8,7 +8,9 @@ import '../CSS/Activities.css';
 import ActivityList from "./ActivityList";
 
 const Activities = () => {
+
   const [activities, setActivities] = useState(null)
+
   const sD = 'sd';
   const District = localStorage.getItem(sD);
 

@@ -29,12 +29,13 @@
   margin-left: 30%;
   font-size:x-large;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .dblock:hover {
   background-color: rgba(120, 160, 194, 0.822);
-  color: black;
-  transition: 00.5s;
+  color: white;
+  transition: 0.25s;
   transform: scale(1.1);
 }
   

@@ -3,19 +3,21 @@ import Footer from '../Components/Footer';
 import {useState,Component} from "react";
 import axios from "axios";
 import Joi from "joi-browser";
-import { useHistory,Link } from "react-router-dom";
+import { useHistory,Link,Redirect } from "react-router-dom";
 import { toast } from 'react-toastify';
 import '../CSS/Sregistration.css';
 
 
 const Sregistration = () => {
   const [companyName, setCompanyName] = useState("");
-  const [serviceType, setServiceType] = useState("Activity Provider");
+  const [serviceType, setServiceType] = useState("");
   const [address, setAddress] = useState("");
-  const [district, setDistrict] = useState("Kandy");
+  const [district, setDistrict] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history=useHistory();
+  
+
 
 
   const handleSubmit = (e) => {
@@ -83,6 +85,7 @@ const Sregistration = () => {
             <input
               type="text"
               required
+              placeholder="Enter the Name Here"
               value={companyName}
               onChange={e => setCompanyName(e.target.value)}
             />
@@ -91,6 +94,7 @@ const Sregistration = () => {
               value={serviceType}
               onChange={e => setServiceType(e.target.value)}
             >
+              <option value="" selected disabled hidden>Select Your Service Type</option>
               <option value="Activity Provider">Activity Provider</option>
               <option value="Restaurant">Restaurant</option>
             </select>
@@ -98,6 +102,7 @@ const Sregistration = () => {
             <input
               type="text"
               required
+              placeholder="Enter the Address"
               value={address}
               onChange={e => setAddress(e.target.value)}
             />
@@ -106,6 +111,7 @@ const Sregistration = () => {
               value={district}
               onChange={e => setDistrict(e.target.value)}
             >
+              <option value="" selected disabled hidden>District of the Organization</option>
               <option value="Ampara">Ampara</option>
               <option value="Anuradhapura">Anuradhapura</option>
               <option value="Badulla">Badulla</option>
@@ -135,6 +141,7 @@ const Sregistration = () => {
             <input
               type="email"
               required
+              placeholder="Enter the Email"
               value={email}
               onChange={e => setEmail(e.target.value)}
             />
@@ -142,6 +149,7 @@ const Sregistration = () => {
             <input
               type="password"
               required
+              placeholder="Enter the Password"
               value={password}
               onChange={e => setPassword(e.target.value)}
             />

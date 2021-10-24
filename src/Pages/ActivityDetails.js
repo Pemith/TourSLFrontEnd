@@ -16,8 +16,7 @@ const ActivityDetails = () => {
       headers: {
         'Content-Type': 'application/json'
       }
-    }
-    )
+    })
       // .then(res => {
       //   return res.json();
       // })
