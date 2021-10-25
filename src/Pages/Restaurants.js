@@ -1,8 +1,8 @@
 import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+// import Footer from '../Components/Footer';
 import { useEffect, useState } from "react";
 
-import '../CSS/Activities.css';
+import '../CSS/Restaurants.css';
 
 
 import RestaurantList from "./RestaurantList";
@@ -25,14 +25,16 @@ const Restaurants = () => {
   }, [])
 
   return (
-    <div className="restaurantmain">
+    <div className="restaurant-list">
         <Navbar />
-        {restaurants && <RestaurantList 
-          restaurants={restaurants.filter(
-            rest => rest.district === District 
-            && rest.serviceType==="Restaurant")
-        } />}
-        <Footer />
+        <div id="SlideBG">
+          {restaurants && <RestaurantList 
+            restaurants={restaurants.filter(
+              rest => rest.district === District 
+              && rest.serviceType==="Restaurant")
+          } />}
+        </div>
+        {/* <Footer /> */}
     </div>
   );
 }

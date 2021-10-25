@@ -1,5 +1,5 @@
 import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+// import Footer from '../Components/Footer';
 import { useEffect, useState } from "react";
 
 import '../CSS/Sites.css';
@@ -28,7 +28,7 @@ const Sites = () => {
         <div id="SlideBG">
         {sites && <SiteList sites={sites.filter(site => site.district === District)} />}
         </div>
-        <Footer />
+        {/* <Footer /> */}
     </div>
   );
 }

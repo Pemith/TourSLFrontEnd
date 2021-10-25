@@ -43,8 +43,7 @@ const DistrictName = () => {
             </button>
             <div class='para'>
                 <p>
-                    <br />Select Sites to see sites that you can visit in the { localStorage.getItem(sD) } 
-                    district
+                    <br />Select Sites to see sites that you can visit in the { localStorage.getItem(sD) } district
                 </p>
             </div>
             <button class='dblock' value="Sites" onClick={e =>getDestincations(e.target.value)}>
