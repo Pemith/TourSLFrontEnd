@@ -13,7 +13,6 @@ import Lighthouse from "./Pages/LightHouse";
 import ClientLogin from "./Pages/ClientLogin";
 import ClientDashboard from "./Pages/ClientDashboard";
 import ClientUpdatePage from "./Pages/ClientUpdatePage";
-import DeletePage from "./Pages/DeletePage";
 import Sregistration from "./Pages/Sregistration";
 import ActivityProvider from "./Pages/ActivityProviderRegistration";
 // import RestaurantRegistration from "./Pages/RestaurantRegistration";
@@ -74,9 +73,6 @@ function App() {
           </Route>
           <Route exact path="/clientupdate/:id">
             <ClientUpdatePage/>
-          </Route>
-          <Route exact path="/delete/:id">
-            <DeletePage/>
           </Route>
           <Route exact path="/sreg">
             <Sregistration/>
