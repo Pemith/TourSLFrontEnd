@@ -1,5 +1,5 @@
 import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+// import Footer from '../Components/Footer';
 import { useEffect, useState } from "react";
 
 import '../CSS/Activities.css';
@@ -29,7 +29,7 @@ const Activities = () => {
       <div id="SlideBG">
         <Navbar />
         {activities && <ActivityList activities={activities.filter(activity => activity.district === District && activity.serviceType==="Activity Provider")} />}
-        <Footer />
+        {/* <Footer /> */}
       </div>
        
     </div>
