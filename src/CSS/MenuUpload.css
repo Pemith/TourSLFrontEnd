@@ -1,8 +1,18 @@
 .MenuUpload{
-    background: url('../Images/MenuUpload.jpg') center center/cover no-repeat;
-    position: cover;
+    background-image: url('../Images/MenuUpload.jpg');
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    justify-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
     
 }
+
+
 
 /* Drop Button */
 

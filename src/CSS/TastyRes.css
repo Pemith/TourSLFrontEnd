@@ -77,12 +77,13 @@
     font-size: 25px;
     line-height: 35px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+    z-index: -2;
     
-    transition: 00.5s;
+    /* transition: 00.5s; */
     
   }
   .displayBtn:hover {
-    background-color: rgb(60, 184, 221);
+    /* background-color: rgb(60, 184, 221); */
     color: black;
     transition: 00.5s;
   }
@@ -111,4 +112,49 @@
   a{
     text-decoration: none;
   }
+
+  .barClass{
+    float:right;
+    margin-right: 5%;
+    margin-top: 2%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+  }
+
+  .barClass:hover{
+    color: #f1356d;
+    transition: 00.25s;
+    transform: scale(1.2);
+  }
+
+  .dropDown-content{
+    display: none;
+    margin-left: 10%;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    min-height: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-size: 15px;
+    z-index: 999;
+  }
+  .dropDown-content a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding:2px 10px;
+    z-index: 999;
+  }
+  .barClass:hover .dropDown-content{
+    display: block;
+    background-color: white;
+    z-index:-1;
+  }
+
+  .dropDown-content a:hover{
+    background-color: #ddd;
+  }
+
   

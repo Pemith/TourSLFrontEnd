@@ -1,9 +1,13 @@
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars} from "@fortawesome/free-solid-svg-icons";
+import reactDom from 'react-dom';
 import { useParams,Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 // import '../CSS/ABCLeisure.css';
 import '../CSS/TastyRes.css';
+import axios from 'axios';
 
 
 const ClientDashboard = () => {
@@ -19,7 +23,7 @@ const ClientDashboard = () => {
 
     if (type==="Restaurant"){
         isRestaurant=true;
-        url='menuupload';
+        url='menuupload/';
 
         try{
             clientMenus=details.filter(packs=>packs.client._id===id);
@@ -31,7 +35,7 @@ const ClientDashboard = () => {
 
     else{
         isRestaurant=false;
-        url='packageupload';
+        url='packageupload/';
 
         try{
             clientPackages=details.filter(rest=>rest.client._id===id);
@@ -68,8 +72,50 @@ const ClientDashboard = () => {
                 console.log(err.message);
             })
         },[]);
-    
 
+        // function handleDelete(idItem){
+        //     console.log(idItem)
+        //     try{
+        //          fetch(("http://localhost:3900/api/"+url+idItem),{
+        //              method:'DELETE'
+        //          })
+        //         .then(
+        //             (response)=>{
+        //             console.log(response);
+        //             // window.location.reload();
+        //             }
+        //         )
+             
+        //     }
+        //     catch(error){
+        //         console.log(error);
+        //     }
+            
+        // }
+    
+        // const handleDelete=()=>{
+        //     fetch("http://localhost:3900/api/"+url+menu)
+        // }
+
+        const deleteItem = (itemId) => {
+            console.log(itemId);
+            axios.delete("http://localhost:3900/api/"+url+itemId).then(
+                (response) => {
+                    alert("Record Deleted Successfully");
+                   try{
+                    this.setDetails({
+                        details: this.details.filter(detail => detail._id !== itemId)
+                    });
+                    
+                   }catch(err){
+                       console.log(err.message);
+                   }
+                }, (error) => {
+                    alert("Operation Failed Here");
+                },
+                window.location.reload()
+            );
+        };
 
     return ( 
         <>
@@ -80,14 +126,34 @@ const ClientDashboard = () => {
                 
                 {isRestaurant && clientMenus && clientMenus.map(menu =>{
                 return <div key={menu._id}>
-                    <button className='displayBtn'>{menu.mealType}: {menu.menuItem}<br/>LKR: {menu.price}/=</button>
+                    <button className='displayBtn'>
+                        {menu.mealType}: {menu.menuItem} 
+                        <div className="barClass">
+                            <FontAwesomeIcon icon={faBars}/>
+                            <div className="dropDown-content">
+                                <Link to={`/clientupdate/${menu._id}`}>Update</Link>
+                                <button onClick={() => {deleteItem(menu._id)}}>Delete</button>
+                                {/* <Link to={`/clientupdate/${menu._id}`}>Update</Link> */}
+                            </div>
+                        </div>                    
+                        <br/>LKR: {menu.price}/=
+                    </button>
                     </div>}
                 )}
                 {!isRestaurant && clientPackages && clientPackages.map(pack =>{ 
                     return <div key={pack._id}>
                     {/* <div className="ABC"></div> */}                
-                    <button className='displayBtn'>{pack.packageName}<br/>
-                        LKR: {pack.price}/=
+                    <button className='displayBtn'>{pack.packageName}
+                        <div className="barClass">
+                            <FontAwesomeIcon icon={faBars}/>
+                            <div className="dropDown-content">
+                                <Link to={`/clientupdate/${pack._id}`}>Update</Link>
+                                <button onClick={() => {deleteItem(pack._id)}}>Delete</button>
+                                {/* <Link to={`/clientupdate/${menu._id}`}>Update</Link> */}
+                            </div>
+                        </div>  
+
+                       <br/> LKR: {pack.price}/=
                     </button>
                     </div>}   
                 )}
