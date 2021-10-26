@@ -1,12 +1,12 @@
 .restaurant-details article h1{
-    font-size: 20px;
+    font-size: 30px;
     color: #f70000;
     margin-bottom: 10px;
   }
 
   .restaurant-details article h2{
-    font-size: 20px;
-    color: #ad0e02;
+    font-size: 25px;
+    color: rgb(119, 0, 24);
     margin-bottom: 10px;
   }
 
@@ -28,5 +28,18 @@
   transition: all .2s ease-in-out;
   width: 40%;
   margin-left: 30%;
+  align-self: center;
+}
+
+.menuBlock{
+  text-align: center;
+  /* margin: 30px 20px; */
+  padding: 10px;
+  margin: 10px;
+  background: rgba(202, 202, 202, 0.993);
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+  width: 60%;
+  margin-left: 20%;
   align-self: center;
 }

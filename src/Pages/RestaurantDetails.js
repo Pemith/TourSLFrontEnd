@@ -1,6 +1,5 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import { FaUmbrellaBeach, FaSwimmer } from "react-icons/fa";
 
 import '../CSS/RestaurantDetails.css';
 import { useParams } from 'react-router-dom';
@@ -100,19 +99,23 @@ const RestaurantDetails =() => {
             <div className="r1block">
               {selectedClient && selectedClient.map(client => {
                 return <div>
-                  <h1>{client.companyName}<br /></h1><h2>{client.address}<br /></h2>
-                  <h3>Contact Number: { client.contactNumber }<br /><br /></h3>
+                  <h1>{client.companyName}<br /></h1><h3>{client.address}</h3>
+                  <p>Contact Number: { client.contactNumber }<br /><br /></p>
                 </div> 
               }
 
               )}
-              {resMenu && resMenu.map(menus =>{
-                    return <div key={menus._id}>
-                        <h4>{menus.menuItem}</h4>
-                        <h5>Meal Type: {menus.mealType}</h5>
-                        <p>Portion Price LKR {menus.price}/=<br/><br/></p>
-                    </div>
-                })}
+              <div className="menuBlock">
+                <h2>Menu</h2>
+                {resMenu && resMenu.map(menus =>{
+                      return <div key={menus._id}>
+                          <h4>{menus.menuItem}</h4>
+                          <h5>Meal Type: {menus.mealType}</h5>
+                          <p>Portion Price LKR {menus.price}/=<br/><br/></p>
+                      </div>
+                  })}
+              </div>
+              
             </div>
                 
             </article>
