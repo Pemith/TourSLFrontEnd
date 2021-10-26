@@ -73,11 +73,11 @@ const ClientUpdatePage = () => {
                             value={mealType}
                             onChange={e=>setMealType(e.target.value)}
                         >
-                            <option value="" selected disabled hidden>Select Beverage/Food/Liquor</option>
+                            <option value="" selected disabled hidden>Select an option</option>
+                            <option value="Appetizer">Appetizer</option>
                             <option value="Beverage">Beverage</option>
-                            <option value="Food">Food</option>
                             <option value="Liquor">Liquor</option>
-                        
+                            <option value="Main Meal">Main Meal</option>
 
                         </select>
                         <label>Price</label>
