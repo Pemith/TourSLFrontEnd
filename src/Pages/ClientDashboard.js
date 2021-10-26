@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 // import '../CSS/ABCLeisure.css';
-import '../CSS/TastyRes.css';
+import '../CSS/ClientDashboard.css';
 import axios from 'axios';
 
 
@@ -20,6 +20,8 @@ const ClientDashboard = () => {
     console.log(type);
     let isRestaurant;
     const [details,setDetails]=useState(null);
+    const [clients, setClients] = useState(null);
+    var selectedClient = null;
 
     if (type==="Restaurant"){
         isRestaurant=true;
@@ -71,7 +73,40 @@ const ClientDashboard = () => {
             .catch((err)=>{
                 console.log(err.message);
             })
-        },[]);
+        }, [])
+
+        useEffect(() => {
+            fetch('http://localhost:3900/api/client',
+            {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            })
+            .then(async response => {
+              try {
+               const data = await response.json()
+               console.log('response data?', data)
+               return data;
+             } catch(error) {
+               console.log('Error happened here!')
+               console.error(error)
+             }})
+            .then(data => {
+              setClients(data);
+              console.log(data)
+            })
+            .catch((err) => {
+              console.log(err.message);
+            })
+          }, [])
+
+          try{
+            selectedClient = clients.filter(client => client._id === id);
+            console.log(selectedClient);
+          }catch(e){
+            console.log(e.message);
+          }
 
         const deleteItem = (itemId) => {
             console.log(itemId);
@@ -97,45 +132,57 @@ const ClientDashboard = () => {
         <>
             <div className="food">
                 <Navbar />
-                
-                <button className="locButton">Location</button>
-                
-                {isRestaurant && clientMenus && clientMenus.map(menu =>{
-                return <div key={menu._id}>
-                    <button className='displayBtn'>
-                        {menu.mealType}: {menu.menuItem} 
-                        <div className="barClass">
-                            <FontAwesomeIcon icon={faBars}/>
-                            <div className="dropDown-content">
-                                <Link to={`/clientupdate/${menu._id}`}>Update</Link>
-                                {/* <button onClick={() => {deleteItem(menu._id)}}>Delete</button> */}
-                                <Link onClick={() => {deleteItem(menu._id)}}>Delete</Link>
-                            </div>
-                        </div>                    
-                        <br/>LKR: {menu.price}/=
-                    </button>
-                    </div>}
-                )}
-                {!isRestaurant && clientPackages && clientPackages.map(pack =>{ 
-                    return <div key={pack._id}>
-                    {/* <div className="ABC"></div> */}                
-                    <button className='displayBtn'>{pack.packageName}
-                        <div className="barClass">
-                            <FontAwesomeIcon icon={faBars}/>
-                            <div className="dropDown-content">
-                                <Link to={`/clientupdate/${pack._id}`}>Update</Link>
-                                {/* <button onClick={() => {deleteItem(pack._id)}}>Delete</button> */}
-                                <Link onClick={() => {deleteItem(pack._id)}}>Delete</Link>
-                            </div>
-                        </div>  
+                <div className="cblock">
+                    {selectedClient && selectedClient.map(client => {
+                        return <div>
+                                <h1>{client.companyName}<br /></h1><h3>{client.address}</h3>
+                                <p>Contact Number: { client.contactNumber }<br /></p>
+                                <p>Open hrs: { client.workingHours }<br /><br /></p>
+                                </div> 
+                        }
 
-                       <br/> LKR: {pack.price}/=
-                    </button>
-                    </div>}   
-                )}
-                <Link to={`/menuupload/${id}`}>
-                    <button className="addButton">Add+</button>
-                </Link>
+                    )}
+                    {isRestaurant && clientMenus && clientMenus.map(menu =>{
+                    return <div key={menu._id}>
+                        <button className="displayBtn">
+                            {menu.mealType}: {menu.menuItem} 
+                            <div className="barClass">
+                                <FontAwesomeIcon icon={faBars}/>
+                                <div className="dropDown-content">
+                                    <Link to={`/clientupdate/${menu._id}`}>Update</Link>
+                                    {/* <button onClick={() => {deleteItem(menu._id)}}>Delete</button> */}
+                                    <Link onClick={() => {deleteItem(menu._id)}}>Delete</Link>
+                                </div>
+                            </div>                    
+                            <br/>LKR: {menu.price}/=
+                        </button>
+                        </div>}
+                    )}
+                    {!isRestaurant && clientPackages && clientPackages.map(pack =>{ 
+                        return <div key={pack._id}>
+                        {/* <div className="ABC"></div> */}                
+                        <button className='displayBtn'>{pack.packageName}
+                            <div className="barClass">
+                                <FontAwesomeIcon icon={faBars}/>
+                                <div className="dropDown-content">
+                                    <Link to={`/clientupdate/${pack._id}`}>Update</Link>
+                                    {/* <button onClick={() => {deleteItem(pack._id)}}>Delete</button> */}
+                                    <Link onClick={() => {deleteItem(pack._id)}}>Delete</Link>
+                                </div>
+                            </div>  
+
+                        <br/> LKR: {pack.price}/=
+                        </button>
+                        </div>}   
+                    )}
+                    <Link to={`/menuupload/${id}`}>
+                        <button className="addButton">Add +</button>
+                    </Link>
+                </div>
+                {/* <button className="locButton">Location</button> */}
+                
+                
+                
                 
                 
                 <Footer />

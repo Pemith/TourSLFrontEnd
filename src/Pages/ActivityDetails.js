@@ -94,7 +94,8 @@ const ActivityDetails = () => {
               {selectedClient && selectedClient.map(client => {
                 return <div>
                   <h1>{client.companyName}<br /></h1><h2>{client.address}<br /></h2>
-                  <h3>Contact Number: { client.contactNumber }<br /><br /></h3>
+                  <p>Contact Number: { client.contactNumber }<br /></p>
+                  <p>Open hrs: { client.workingHours }<br /><br /></p>
                 </div> 
               }
 
