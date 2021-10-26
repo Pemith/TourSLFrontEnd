@@ -9,16 +9,13 @@ import Activities from "./Pages/Activities";
 import SiteDetails from "./Pages/SiteDetails";
 import ActivityDetails from "./Pages/ActivityDetails";
 import RestaurantDetails from "./Pages/RestaurantDetails";
-import Lighthouse from "./Pages/LightHouse";
 import ClientLogin from "./Pages/ClientLogin";
 import ClientDashboard from "./Pages/ClientDashboard";
 import ClientUpdatePage from "./Pages/ClientUpdatePage";
 import Sregistration from "./Pages/Sregistration";
 import ActivityProvider from "./Pages/ActivityProviderRegistration";
-// import RestaurantRegistration from "./Pages/RestaurantRegistration";
 import ABCPackagename from "./Pages/ABCPackagename";
 import MenuUpload from "./Pages/MenuUpload";
-import Profile from "./Pages/Profile";
 import  Sites from "./Pages/Sites";
 import Restaurants from "./Pages/Restaurants";
 import LegalDocuments from "./Pages/LegalDocuments";
@@ -62,9 +59,6 @@ function App() {
           <Route exact path="/menu/:id">
             <RestaurantDetails/>
           </Route>
-          <Route exact path="/lighthouse">
-            <Lighthouse/>
-          </Route>
           <Route exact path="/login">
             <ClientLogin/>
           </Route>
@@ -88,9 +82,6 @@ function App() {
           </Route>
           <Route exact path='/menuupload/:id'>
             <MenuUpload/>
-          </Route>
-          <Route exact path='/profile'>
-            <Profile/>
           </Route>
           <Route exact path='/sites'>
             <Sites/>

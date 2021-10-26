@@ -11,6 +11,7 @@ import '../CSS/Sregistration.css';
 const Sregistration = () => {
   const [companyName, setCompanyName] = useState("");
   const [serviceType, setServiceType] = useState("");
+  const [contactNumber,setContactNumber]=useState("");
   const [address, setAddress] = useState("");
   const [district, setDistrict] = useState("");
   const [email, setEmail] = useState("");
@@ -22,23 +23,13 @@ const Sregistration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // const errors = this.validate();
-    // this.setState({ errors: errors || {} });
-    // if (errors) return;
-    // const result = {
-    //   companyName,
-    //   serviceType,
-    //   address,
-    //   district,
-    //   email,
-    //   password,
-    // };
+  
     try {
       
       axios.post("http://localhost:3900/api/client/", {
         companyName: companyName,
         serviceType: serviceType,
+        contactNumber:contactNumber,
         address: address,
         district: district,
         email: email,
@@ -50,7 +41,8 @@ const Sregistration = () => {
       .then(
         (response) => {
           console.log(response);
-          history.push('/legal')
+          window.location="/home";
+          // history.push('/legal')
         },
         (error) => {
           console.log(error.response.data);
@@ -98,6 +90,14 @@ const Sregistration = () => {
               <option value="Activity Provider">Activity Provider</option>
               <option value="Restaurant">Restaurant</option>
             </select>
+            <label>Contact Number</label>
+            <input 
+              type="text" 
+              required
+              placeholder="Enter a Valid Contact Number"
+              value={contactNumber}
+              onChange={e => setContactNumber(e.target.value)}
+            />
             <label>Address</label>
             <input
               type="text"
@@ -130,7 +130,7 @@ const Sregistration = () => {
               <option value="Matale">Matale</option>
               <option value="Monaragala">Monaragala</option>
               <option value="Mullativu">Mullativu</option>
-              <option value="Nuwara_Eliya">Nuwara Eliya</option>
+              <option value="Nuwara Eliya">Nuwara Eliya</option>
               <option value="Polonnaruwa">Polonnaruwa</option>
               <option value="Puttalam">Puttalam</option>
               <option value="Rathnapura">Rathnapura</option>
@@ -154,7 +154,7 @@ const Sregistration = () => {
               onChange={e => setPassword(e.target.value)}
             />
 
-            <button>Next</button>
+            <button>Submit</button>
           </form>
         </div>
       </div>

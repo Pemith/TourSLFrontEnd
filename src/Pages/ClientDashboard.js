@@ -73,30 +73,6 @@ const ClientDashboard = () => {
             })
         },[]);
 
-        // function handleDelete(idItem){
-        //     console.log(idItem)
-        //     try{
-        //          fetch(("http://localhost:3900/api/"+url+idItem),{
-        //              method:'DELETE'
-        //          })
-        //         .then(
-        //             (response)=>{
-        //             console.log(response);
-        //             // window.location.reload();
-        //             }
-        //         )
-             
-        //     }
-        //     catch(error){
-        //         console.log(error);
-        //     }
-            
-        // }
-    
-        // const handleDelete=()=>{
-        //     fetch("http://localhost:3900/api/"+url+menu)
-        // }
-
         const deleteItem = (itemId) => {
             console.log(itemId);
             axios.delete("http://localhost:3900/api/"+url+itemId).then(
@@ -132,8 +108,8 @@ const ClientDashboard = () => {
                             <FontAwesomeIcon icon={faBars}/>
                             <div className="dropDown-content">
                                 <Link to={`/clientupdate/${menu._id}`}>Update</Link>
-                                <button onClick={() => {deleteItem(menu._id)}}>Delete</button>
-                                {/* <Link to={`/clientupdate/${menu._id}`}>Update</Link> */}
+                                {/* <button onClick={() => {deleteItem(menu._id)}}>Delete</button> */}
+                                <Link onClick={() => {deleteItem(menu._id)}}>Delete</Link>
                             </div>
                         </div>                    
                         <br/>LKR: {menu.price}/=
@@ -148,8 +124,8 @@ const ClientDashboard = () => {
                             <FontAwesomeIcon icon={faBars}/>
                             <div className="dropDown-content">
                                 <Link to={`/clientupdate/${pack._id}`}>Update</Link>
-                                <button onClick={() => {deleteItem(pack._id)}}>Delete</button>
-                                {/* <Link to={`/clientupdate/${menu._id}`}>Update</Link> */}
+                                {/* <button onClick={() => {deleteItem(pack._id)}}>Delete</button> */}
+                                <Link onClick={() => {deleteItem(pack._id)}}>Delete</Link>
                             </div>
                         </div>  
 

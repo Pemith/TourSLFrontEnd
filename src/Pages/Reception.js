@@ -29,7 +29,10 @@ const Reception = () => {
                     <source src={backgroundVideo} type='video/mp4'/>
                 </video>
                 <div className="reception-img">
-                    <img src={slImg} />
+                    <img src={slImg} style={{
+                        "-webkit-filter":"drop-ShadowRoot(5px 5px 5px #222 )",
+                        filter:"drop-shadow(5px 5px 5px #222)"
+                    }} />
                 </div>
                 <div className='reception-p'>
                     <p>
@@ -62,7 +65,7 @@ const Reception = () => {
                             <option value="Matale">Matale</option>
                             <option value="Monaragala">Monaragala</option>
                             <option value="Mullativu">Mullativu</option>
-                            <option value="Nuwara_Eliya">Nuwara Eliya</option>
+                            <option value="Nuwara Eliya">Nuwara Eliya</option>
                             <option value="Polonnaruwa">Polonnaruwa</option>
                             <option value="Puttalam">Puttalam</option>
                             <option value="Rathnapura">Rathnapura</option>
@@ -74,7 +77,7 @@ const Reception = () => {
                         </div>         
                     </form>
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </div></>
         
         
