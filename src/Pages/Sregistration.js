@@ -12,6 +12,7 @@ const Sregistration = () => {
   const [companyName, setCompanyName] = useState("");
   const [serviceType, setServiceType] = useState("");
   const [contactNumber,setContactNumber]=useState("");
+  const [workingHours,setWorkingHours]=useState("");
   const [address, setAddress] = useState("");
   const [district, setDistrict] = useState("");
   const [email, setEmail] = useState("");
@@ -30,6 +31,7 @@ const Sregistration = () => {
         companyName: companyName,
         serviceType: serviceType,
         contactNumber:contactNumber,
+        workingHours:workingHours,
         address: address,
         district: district,
         email: email,
@@ -97,6 +99,14 @@ const Sregistration = () => {
               placeholder="Enter a Valid Contact Number"
               value={contactNumber}
               onChange={e => setContactNumber(e.target.value)}
+            />
+            <label>Working Hours</label>
+            <input 
+              type="text" 
+              required
+              placeholder="Ex:- (9.00 a.m-10.00 p.m)"
+              value={workingHours}
+              onChange={e => setWorkingHours(e.target.value)}
             />
             <label>Address</label>
             <input
