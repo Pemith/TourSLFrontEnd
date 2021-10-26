@@ -136,7 +136,7 @@ const ClientDashboard = () => {
                     {selectedClient && selectedClient.map(client => {
                         return <div>
                                 <h1>{client.companyName}<br /></h1>
-                                <h3>{client.address}</h3>
+                                <h3>{client.address}.</h3>
                                 <h3>{client.district} District</h3>
                                 <p>Contact Number: { client.contactNumber }<br /></p>
                                 <p>Open hrs: { client.workingHours }<br /><br /></p>
