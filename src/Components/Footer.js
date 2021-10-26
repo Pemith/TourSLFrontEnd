@@ -20,7 +20,8 @@ function Footer() {
                         <p>
                              About Us
                              <hr style={{width:"150px"}} />
-                             The Description Related to the tour SL Web Site Comes here
+                             We are Group 16 of Intake 37 who are developing a Tourist Guidance 
+                             Web Application <br/> as our second year software development group project.
                         </p>
                     </div>
                     <div className="column right">

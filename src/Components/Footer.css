@@ -11,7 +11,7 @@
   bottom: 0;
   right: 0;
   position:sticky;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .container {
@@ -21,7 +21,7 @@
   justify-content: center;
   width: 95%;
   margin: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .column {
@@ -29,27 +29,27 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .row {
   display: flex;
   width: 95%;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .left{
   width: 10%;
   text-align: left;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .middle {
   width: 75%;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .main-footer-img{
@@ -64,7 +64,7 @@
   width: 15%;
   text-align: left;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .main-footer p {

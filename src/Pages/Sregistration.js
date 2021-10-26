@@ -138,6 +138,7 @@ const Sregistration = () => {
               <option value="Kurunegala">Kurunegala</option>
               <option value="Mannar">Mannar</option>
               <option value="Matale">Matale</option>
+              <option value="Matara">Matara</option>
               <option value="Monaragala">Monaragala</option>
               <option value="Mullativu">Mullativu</option>
               <option value="Nuwara Eliya">Nuwara Eliya</option>
