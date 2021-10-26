@@ -2,6 +2,11 @@
 
 .food{
     background: #FFFCFC;
+    height:100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
 }
 
 /* Drop Button */

@@ -1,11 +1,15 @@
-.login-img{
-    background: url('../Images/sunrise.jpg') center center/cover no-repeat;
+.loginBackground{
+    background: url('../Images/TeaEstate.jpg') ;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    /* position: absolute; */
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     justify-content: center;
+    justify-items: center;
 }
 
     .boxlog{

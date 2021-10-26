@@ -10,6 +10,7 @@ const MenuUpload = () => {
     const type=localStorage.getItem('type');
     let url;
     let isRestaurant;
+    let cssClass;
     const {id}=useParams();
     const [clientId]=useState('');
     const [menuItem,setMenuItem]=useState();
@@ -21,11 +22,13 @@ const MenuUpload = () => {
     if(type==="Restaurant"){
         url='/menuupload';
         isRestaurant=true;
+        cssClass="MenuUpload";
     }
 
     else{
         url='/packageupload';
         isRestaurant=false;
+        cssClass="packageUpload";
     }
 
     const handleSubmit=(e) =>{
@@ -52,7 +55,7 @@ const MenuUpload = () => {
 
     }
     return(
-        <div className="MenuUpload">
+        <div className={cssClass}>
             <Navbar/>
             {isRestaurant && (
                 <div className="box">
@@ -72,9 +75,10 @@ const MenuUpload = () => {
                             value={mealType}
                             onChange={e=>setMealType(e.target.value)}
                         >
-                            <option value="" selected disabled hidden>Select Food/Beverage</option>
-                            <option value="Food">Food</option>
+                            <option value="" selected disabled hidden>Select Beverage/Food/Liquor</option>
                             <option value="Beverage">Beverage</option>
+                            <option value="Food">Food</option>
+                            <option value="Liquor">Liquor</option>
 
                         </select>
                         <label>Price</label>

@@ -92,7 +92,7 @@ const ClientLogin = () => {
         return <Redirect to={`/clientdashboard/${clientId}`} />
     }
     return (
-        <div className="login-img">
+        <div className="loginBackground">
             <Navbar/>
                 <div className="boxlog">
                     <div className="formstyle">

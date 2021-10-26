@@ -6,8 +6,9 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;  
-    position: relative;
+    background-position: center; 
+    justify-content: center; 
+    position: absolute;
 }
 
 .apreg{
