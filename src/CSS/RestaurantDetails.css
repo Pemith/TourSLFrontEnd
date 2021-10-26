@@ -1,3 +1,8 @@
+.restaurant-details{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 .restaurant-details article h1{
     font-size: 30px;
     color: #f70000;
