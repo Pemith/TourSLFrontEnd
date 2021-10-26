@@ -1,9 +1,35 @@
 .site-details article h2 {
-  font-size: 20px;
+  font-size: 25px;
   color: #f1356d;
-  margin-bottom: 10px;
-}
-.site-details article div {
-  margin: 20px 0;
+  /* margin-bottom: 10px; */
 }
 
+.site-details article h1 {
+  font-size: 40px;
+  color: #f1356d;
+  text-align: center;
+  /* margin-bottom: 10px; */
+}
+
+/* .site-details article div {
+  margin: 20px 0;
+} */
+
+.s1block{
+  text-align:justify;
+  /* margin: 30px 20px; */
+  padding: 10px;
+  margin: 10px;
+  background: rgba(241, 241, 241, 0.685);
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+  width: 60%;
+  margin-left: 20%;
+  align-self: center;
+}
+
+.site-details article p {
+  font-size: 20px;
+  /* color: #f1356d; */
+  /* margin-bottom: 10px; */
+}

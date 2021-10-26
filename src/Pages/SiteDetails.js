@@ -23,6 +23,7 @@ const SiteDetails = () => {
         <Navbar />
         {site && (
             <article>
+              <div className="s1block">
                 <h1>{ site.name }<br/><br/></h1>
                 <h2>District</h2>
                 <p>{ site.district }<br/><br/></p>
@@ -32,6 +33,8 @@ const SiteDetails = () => {
                 <p>{ site.openHrs }<br/><br/></p>
                 <h2>Description</h2>
                 <p>{ site.description }<br/><br/></p>
+              </div>
+                
             </article>
         )}
         <Footer />
