@@ -1,3 +1,8 @@
+.activity-details{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 .activity-details article h1{
     font-size: 20px;
     color: #f70000;

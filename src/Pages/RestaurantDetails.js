@@ -120,6 +120,7 @@ const RestaurantDetails =() => {
             </div>
                 
             </article>
+            <Footer/>
         </div>
 
     )
