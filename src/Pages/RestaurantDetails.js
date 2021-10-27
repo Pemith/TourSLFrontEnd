@@ -112,7 +112,7 @@ const RestaurantDetails =() => {
                       return <div key={menus._id}>
                           <h4>{menus.menuItem}</h4>
                           <h5>Meal Type: {menus.mealType}</h5>
-                          <p>Portion Price LKR {menus.price}/=<br/><br/></p>
+                          <p>Price: LKR {menus.price}/=<br/><br/></p>
                       </div>
                   })}
               </div>
