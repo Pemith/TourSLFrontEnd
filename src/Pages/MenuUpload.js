@@ -78,8 +78,10 @@ const MenuUpload = () => {
                             <option value="" selected disabled hidden>Select an option</option>
                             <option value="Appetizer">Appetizer</option>
                             <option value="Beverage">Beverage</option>
+                            <option value="Dessert">Dessert</option>
                             <option value="Liquor">Liquor</option>
                             <option value="Main Meal">Main Meal</option>
+                            <option value="Side Dish">Side Dish</option>
 
                         </select>
                         <label>Price</label>
